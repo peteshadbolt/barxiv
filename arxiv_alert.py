@@ -9,7 +9,10 @@ def strip_title(title): return title.split('(')[0]
 
 d = feedparser.parse('http://arxiv.org/rss/quant-ph')
 
-keywords=['walk', 'hilbert', 'dimension', 'bosonsampling', 'optics', 'optical', 'photon']
+keywords=['walk', 'hilbert', 'dimension', 'bosonsampling', 'optics', 'optical', 'photon', 'walmsley']
+keywords+=['sliberhorn', 'sciarrino', 'mataloni']
+
+
 out=open('index.html', 'w')
 out.write('<html><head>')
 out.write('<link rel="stylesheet" href="css.css" type="text/css">')
@@ -19,6 +22,8 @@ entries=[]
 
 for entry in d.entries:
     title=entry['title']
+    url=entry['link']
+    url=url.replace('abs', 'pdf')
     updated='UPDATED' in title
     s=''
     if not updated:
@@ -27,11 +32,17 @@ for entry in d.entries:
         authors=strip_authors(entry['author_detail']['name'])
         total=(title+summary+authors).lower()
         matches=[keyword for keyword in keywords if (keyword in total)]
-        matches=[' [%s] ' % x for x  in matches]
-        if len(matches)>0: s+=('<font color="#cc0000">')
-        s+='<b>'+(title)+'</b>'
-        s+=('<font size=2pt>'+authors+'  |  '+('  '.join(matches))+'<br><br></font>')
-        if len(matches)>0: s+=('</font>')
+
+        high='highlight' if len(matches)>0 else 'none'
+        s+='<b><a class="%s" href="' % high
+        s+=url+'">'+title+'</a></b>'
+        s+='<font size=2pt>'+authors+'  |  '
+
+        for match in matches:
+            s+='<span class="tag">%s</span> ' % match
+                
+        s+='<br><br></font>'
+
         entries.append((len(matches), s))
 
 entries=sorted(entries, key=lambda x: x[0], reverse=1)
