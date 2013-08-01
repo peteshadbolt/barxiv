@@ -1,10 +1,8 @@
 //run on startup
 $(document).ready(main);
 
-window.setInterval(function(){
-    $('#container').randomize('div.post');
-}, 100);
 
+// jquery extension to do the randomization
 (function($) {
 $.fn.randomize = function(childElem) {
   return this.each(function() {
@@ -42,6 +40,7 @@ function getParameterByName(name) {
 // clean up the title
 function stripTitle(oldtitle) { return oldtitle.replace(/ *\([^)]*\) */g, ""); }
 
+
 // clean up the authors
 function stripAuthors(full) {
     full=String(full);
@@ -52,11 +51,12 @@ function stripAuthors(full) {
     return full
 }
 
+
 // format a post
 function getPost(entry)
 {
     var post='';
-    if (entry.title.indexOf('UPDATED')==-1) { post+='<div class="post">';} else { post+='<div class="postupdated">';}
+    post+='<div class="post">';
     post+='<div>';
     post+='<span class="title">';
     var link = entry.link.replace(/abs/, 'pdf');
@@ -68,16 +68,16 @@ function getPost(entry)
 
     post+='<div class="authors">';
     post+=stripAuthors(entry.author);
-    post+='awd'
     post+='</div>';
     post+='</div>';
     return post;
 }
 
+
 // this gets called when the rss is loaded
 function populate(rssjson)
 {
-    
+    console.log(rssjson);
     $('p').text('Loading...');
     for (var i=0; i<rssjson.entries.length; i++)
     { 
@@ -85,13 +85,33 @@ function populate(rssjson)
         post=getPost(entry);
         $('#container').append(post);
     }
-
-    // testing ordering
 }
+
+
+// update the ordering etc
+function update()
+{
+    // clear the introduction if necessary
+    if ($('#introduction').length) { $('#introduction').slideUp(1000, function() {$('#introduction').remove();}); }
+
+    // set the ordering
+    $('#container').randomize('div.post');
+}
+
 
 // the main function, gets called when the page loads
 function main() 
 {
-    $('#inputbox').val(getParameterByName('tags'));
     parseRSS('http://arxiv.org/rss/quant-ph', populate);
+    //var arxiv_query='http://export.arxiv.org/api/query?search_query=cat:quant-ph&start=0&max_results=50&sortBy=submittedDate&sortOrder=descending';
+    //parseRSS(arxiv_query, populate);
+    
+    // randomize once 
+    $('#container').randomize('div.post');
+
+    // Bind to input box update
+    $('#inputbox').keyup(update);
+
+    // set the input box from the query string
+    //$('#inputbox').val(getParameterByName('tags'));
 }
