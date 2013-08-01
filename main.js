@@ -1,23 +1,22 @@
 //run on startup
 $(document).ready(main);
 
-// here's how to do the fast re-ordering
-//http://jsbin.com/oyaxa/1/edit
-//$('button').click(function() {
-//$("div.band").randomize("div.member");
-//});
-//(function($) {
-//$.fn.randomize = function(childElem) {
-  //return this.each(function() {
-      //var $this = $(this);
-      //var elems = $this.children(childElem);
-      //elems.sort(function() { return (Math.round(Math.random())-0.5); });  
-      //$this.empty();  
-      //for(var i=0; i < elems.length; i++)
-        //$this.append(elems[i]);      
-  //});    
-//}
-//})(jQuery);
+window.setInterval(function(){
+    $('#container').randomize('div.post');
+}, 100);
+
+(function($) {
+$.fn.randomize = function(childElem) {
+  return this.each(function() {
+      var $this = $(this);
+      var elems = $this.children(childElem);
+      elems.sort(function() { return (Math.round(Math.random())-0.5); });  
+      $this.empty();  
+      for(var i=0; i < elems.length; i++)
+        $this.append(elems[i]);      
+  });    
+}
+})(jQuery);
 
 
 // parse some rss
@@ -86,6 +85,8 @@ function populate(rssjson)
         post=getPost(entry);
         $('#container').append(post);
     }
+
+    // testing ordering
 }
 
 // the main function, gets called when the page loads
