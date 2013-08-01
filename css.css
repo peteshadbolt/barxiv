@@ -1,1 +1,7 @@
-body{font-family:sans}
+body{font-family:'arial', sans-serif}
+
+div.post{ padding:5px; margin: 5px; background-color: #eeeeff;}
+
+div.authors { font-size:8pt }
+
+span.title{ font-weight: bold}
