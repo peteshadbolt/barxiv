@@ -17,38 +17,12 @@ $.fn.randomize = function(childElem) {
 })(jQuery);
 
 
-// parse some rss
-function parseRSS(url, callback) 
-{
-  $.ajax({
-      url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=100&callback=?&q=' + encodeURIComponent(url),
-    dataType: 'json',
-    success: function(data) {
-      callback(data.responseData.feed);
-    }
-  });
-}
-
 // get the query string (http://www.mysite.com/index.php?x=x1&x=x2&x=x3)
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-// clean up the title
-function stripTitle(oldtitle) { return oldtitle.replace(/ *\([^)]*\) */g, ""); }
-
-
-// clean up the authors
-function stripAuthors(full) {
-    full=String(full);
-    full=full.replace(/\&lt/g, '<');
-    full=full.replace(/\&gt/g, '>');
-    full=full.replace(/<[^>]*>/g, '');
-    full=full.replace(/;/g, '');
-    return full
 }
 
 
@@ -74,17 +48,10 @@ function getPost(entry)
 }
 
 
-// this gets called when the rss is loaded
-function populate(rssjson)
+// this function populates the page
+function populate(jsonData)
 {
-    console.log(rssjson);
-    $('p').text('Loading...');
-    for (var i=0; i<rssjson.entries.length; i++)
-    { 
-        var entry=rssjson.entries[i];
-        post=getPost(entry);
-        $('#container').append(post);
-    }
+    for (var i=0; i<jsonData.length; i++) { $('#container').append(getPost(jsonData[i])); }
 }
 
 
@@ -102,9 +69,8 @@ function update()
 // the main function, gets called when the page loads
 function main() 
 {
-    parseRSS('http://arxiv.org/rss/quant-ph', populate);
-    //var arxiv_query='http://export.arxiv.org/api/query?search_query=cat:quant-ph&start=0&max_results=50&sortBy=submittedDate&sortOrder=descending';
-    //parseRSS(arxiv_query, populate);
+    // fill the screen
+    populate(arxivData);
     
     // randomize once 
     $('#container').randomize('div.post');
