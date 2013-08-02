@@ -96,7 +96,7 @@ function update()
     }    
 
     // update the link
-    var link='http://www.peteshadbolt.co.uk/barxiv.html?'+tags.join('_');
+    var link='http://www.peteshadbolt.co.uk/barxiv.html?tags='+tags.join('_');
     $('#bookMarkLink').text(link);
     $('#bookMarkLink').attr('href', 'link')}
 
@@ -113,5 +113,5 @@ function main()
 
     // set the input box from the query string
     $('#inputbox').val(getQuery('tags').replace(/_/g, ' '));
-    update();
+    //update();
 }
