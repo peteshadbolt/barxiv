@@ -1,17 +1,18 @@
 body{font-family:'arial', sans-serif}
 
 div.post{ padding:5px; margin: 10px; background-color: #eeeeff; border-radius:3px;}
-div.post a{color:black; text-decoration:none;  }
+div.post a{font-weight: bold; color:black; text-decoration:none;  }
 div.post a:hover{ text-decoration:underline;}
-
 div.authors { font-size:8pt }
+
+div.authors i{color:gray}
+
+div.match {margin-left: 20px; font-size: 9pt; font-family: monospace; display:inline; background-color: #ffffff}
 
 #introduction { padding:5px; margin:10px; background-color: #ffffaa; border-radius: 3px; font-size: 10pt; font-weight:bold}
 
 #footer { font-size: 8pt; color: #ff8800; padding:20px; margin:20px; text-align:center;}
 #footer a { color: #883300 }
-
-span.title{ font-weight: bold; }
 
 #input {font-size:10pt; padding:5px; margin:10px; background-color: #ffdddd; border-radius: 3px;}
 #inputbox {width:100%}
