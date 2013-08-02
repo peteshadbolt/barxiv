@@ -7,7 +7,7 @@ var arxivData = [
     "authors": "N. Buric, D. B. Popovic, S. Prvanovic, M. Radonjic", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8424v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 1, 
@@ -17,7 +17,7 @@ var arxivData = [
     "authors": "Dries Sels, Fons Brosens", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8417v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 2, 
@@ -27,7 +27,7 @@ var arxivData = [
     "authors": "Sebastiano Peotta, Massimiliano Di Ventra", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8416v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 3, 
@@ -37,7 +37,7 @@ var arxivData = [
     "authors": "Teck Seng Koh, S. N. Coppersmith, Mark Friesen", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8406v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 4, 
@@ -47,7 +47,7 @@ var arxivData = [
     "authors": "Cyriaque Genet, Astrid Lambrecht, Thomas W. Ebbesen, Serge Reynaud", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8378v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 5, 
@@ -57,7 +57,7 @@ var arxivData = [
     "authors": "Sameer M. Ikhdair, Babatunde James Falaye, Majid Hamzavi", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8318v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 6, 
@@ -67,7 +67,7 @@ var arxivData = [
     "authors": "Sameer M. Ikhdair, majid Hamzavi", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8311v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 7, 
@@ -77,7 +77,7 @@ var arxivData = [
     "authors": "Sameer M. Ikhdair, Majid Hamzavi", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8306v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 8, 
@@ -87,7 +87,7 @@ var arxivData = [
     "authors": "V. Bolpasi, N. K. Efremidis, M. J. Morrissey, P. Condylis, D. Sahagun, M. Baker, W. von Klitzing", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8282v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 9, 
@@ -97,7 +97,7 @@ var arxivData = [
     "authors": "Pedro Sancho", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8274v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 10, 
@@ -107,7 +107,7 @@ var arxivData = [
     "authors": "Keith R. Motes, Jonathan P. Dowling, Peter P. Rohde", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8238v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 11, 
@@ -117,7 +117,7 @@ var arxivData = [
     "authors": "Viktor S. Perunicic, Liam T. Hall, David A. Simpson, Charles D. Hill, Lloyd C. L. Hollenberg", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8220v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 12, 
@@ -127,7 +127,7 @@ var arxivData = [
     "authors": "Swathi S. Hegde, Hemant Katiyar, T. S. Mahesh, Arnab Das", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8219v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 13, 
@@ -137,7 +137,7 @@ var arxivData = [
     "authors": "Kristen L. Pudenz, Tameem Albash, Daniel A. Lidar", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8190v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 14, 
@@ -147,7 +147,7 @@ var arxivData = [
     "authors": "Nuno Costa Dias, Maurice A. de Gosson, Jo\u00e3o Nuno Prata", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8185v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 15, 
@@ -157,7 +157,7 @@ var arxivData = [
     "authors": "S. S. Y. Chua, S. Dwyer, L. Barsotti, D. Sigg, R. M. S. Schofield, V. V. Frolov, K. Kawabe, M. Evans, G. D. Meadors, M. Factourovich, R. Gustafson, N. Smith-Lefebvre, C. Vorvick, M. Landry, A. Khalaidovski, M. S. Stefszky, C. M. Mow-Lowry, B. C. Buchler, D. A. Shaddock, P. K. Lam, R. Schnabel, N. Mavalvala, D. E. McClelland", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8176v1", 
-    "published": "Wednesday 31 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 16, 
@@ -167,7 +167,7 @@ var arxivData = [
     "authors": "Mikhail Lemeshko", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8129v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 17, 
@@ -177,7 +177,7 @@ var arxivData = [
     "authors": "Brian Swingle", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8117v2", 
-    "published": "Tuesday 30 July"
+    "published": "YESTERDAY (updated Thursday 01 August)"
   }, 
   {
     "index": 18, 
@@ -187,7 +187,7 @@ var arxivData = [
     "authors": "Igor Lesanovsky, Juan P. Garrahan", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8078v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 19, 
@@ -197,7 +197,7 @@ var arxivData = [
     "authors": "Juan Sebasti\u00e1n Ardenghi, Pablo Bechthold, Paula Jasen, Estela Gonzalez, Oscar Nagel", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8056v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 20, 
@@ -207,7 +207,7 @@ var arxivData = [
     "authors": "Ryan Babbush, Bryan O'Gorman, Al\u00e1n Aspuru-Guzik", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8041v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 21, 
@@ -217,7 +217,7 @@ var arxivData = [
     "authors": "Xiaoxing Jing, Jing Liu, Wei Zhong, Xiaoguang Wang", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8009v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 22, 
@@ -227,7 +227,7 @@ var arxivData = [
     "authors": "Utkan G\u00fcng\u00f6rd\u00fc, Yidun Wan, Mikio Nakahara", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.8001v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 23, 
@@ -237,7 +237,7 @@ var arxivData = [
     "authors": "Manik Banik, Some Sankar Bhattacharya, Sujit K Choudhary, Guruprasad Kar, Amit Mukherjee, Arup Roy", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7989v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 24, 
@@ -247,7 +247,7 @@ var arxivData = [
     "authors": "Victor Mukherjee, Alberto Carlini, Andrea Mari, Tommaso Caneva, Simone Montangero, Tommaso Calarco, Rosario Fazio, Vittorio Giovannetti", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7964v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 25, 
@@ -257,7 +257,7 @@ var arxivData = [
     "authors": "Harald Herrmann, Xu Yang, Abu Thomas, Andreas Poppe, Wolfgang Sohler, Christine Silberhorn", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7939v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 26, 
@@ -267,7 +267,7 @@ var arxivData = [
     "authors": "Helen Ebbe, Stefan Wolf", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7927v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 27, 
@@ -277,7 +277,7 @@ var arxivData = [
     "authors": "Andrzej Grudka, Karol Horodecki, Micha\u0142 Horodecki, Waldemar K\u0142obus, Marcin Paw\u0142owski", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7904v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 28, 
@@ -287,7 +287,7 @@ var arxivData = [
     "authors": "Giacomo Mauro D'Ariano, Franco Manessi, Paolo Perinotti, Alessandro Tosini", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7902v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 29, 
@@ -297,7 +297,7 @@ var arxivData = [
     "authors": "M. Asghari, P. Pedram, K. Nozari", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7899v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 30, 
@@ -307,7 +307,7 @@ var arxivData = [
     "authors": "Michael Tomka, Omar El Araby, Mikhail Pletyukhov, Vladimir Gritsev", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7876v2", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Wednesday 31 July)"
   }, 
   {
     "index": 31, 
@@ -317,7 +317,7 @@ var arxivData = [
     "authors": "D. S. Smirnov, M. M. Glazov, E. L. Ivchenko", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7843v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 32, 
@@ -327,7 +327,7 @@ var arxivData = [
     "authors": "Thomas Brochmann Pedersen, Mustafa Toyran", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7829v1", 
-    "published": "Tuesday 30 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 33, 
@@ -337,7 +337,7 @@ var arxivData = [
     "authors": "Oliver Buerschaper", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7763v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 34, 
@@ -347,7 +347,7 @@ var arxivData = [
     "authors": "J. A. Sherman, M. J. Curtis, D. J. Szwer, D. T. C. Allcock, G. Imreh, D. M. Lucas, A. M. Steane", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7754v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 35, 
@@ -357,7 +357,7 @@ var arxivData = [
     "authors": "Huw Price, Ken Wharton", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7744v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 36, 
@@ -367,7 +367,7 @@ var arxivData = [
     "authors": "Javier Cerrillo, Jianshu Cao", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7743v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 37, 
@@ -377,7 +377,7 @@ var arxivData = [
     "authors": "J. Dubail, N. Read", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7726v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 38, 
@@ -387,7 +387,7 @@ var arxivData = [
     "authors": "S. M. Giampaolo, S. Montangero, F. Dell'Anno, S. De Siena, F. Illuminati", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7718v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 39, 
@@ -397,7 +397,7 @@ var arxivData = [
     "authors": "D. M. Jezek, H. M. Cataldo", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7694v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 40, 
@@ -407,7 +407,7 @@ var arxivData = [
     "authors": "Peter C. Humphreys, Marco Barbieri, Animesh Datta, Ian A. Walmsley", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7653v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 41, 
@@ -417,7 +417,7 @@ var arxivData = [
     "authors": "R. D. Wilson, M. J. Everitt, W. J. Munro, Tim Spiller", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7637v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 42, 
@@ -427,7 +427,7 @@ var arxivData = [
     "authors": "D. B. Hume, I. Stroescu, M. Joos, W. Muessel, H. Strobel, M. K. Oberthaler", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7598v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 43, 
@@ -437,7 +437,7 @@ var arxivData = [
     "authors": "Yi-Chen Zhang, Zhengyu Li, Christian Weedbrook, Song Yu, Wanyi Gu, Maozhu Sun, Xiang Peng, Hong Guo", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7590v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 44, 
@@ -447,7 +447,7 @@ var arxivData = [
     "authors": "Akshata Shenoy H., R. Srikanth, T. Srinivas", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7551v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 45, 
@@ -457,7 +457,7 @@ var arxivData = [
     "authors": "Giacomo Corrielli, Andrea Crespi, Roberto Osellame, Riccardo Geremia, Roberta Ramponi, Linda Sansoni, Andrea Santinelli, Paolo Mataloni, Fabio Sciarrino", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7541v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 46, 
@@ -467,7 +467,7 @@ var arxivData = [
     "authors": "Yasuhiro Yamada, Masatoshi Imada", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7535v2", 
-    "published": "Monday 29 July"
+    "published": " (updated Tuesday 30 July)"
   }, 
   {
     "index": 47, 
@@ -477,7 +477,7 @@ var arxivData = [
     "authors": "Anargyros Papageorgiou, Joseph F. Traub", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7488v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 48, 
@@ -487,7 +487,7 @@ var arxivData = [
     "authors": "Chengjie Zhang, Sixia Yu, Qing Chen, C. H. Oh", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7487v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 49, 
@@ -497,7 +497,7 @@ var arxivData = [
     "authors": "Moonjoo Lee, Kyungwon An", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7476v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 50, 
@@ -507,7 +507,7 @@ var arxivData = [
     "authors": "A. Thilagam", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7428v1", 
-    "published": "Monday 29 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 51, 
@@ -517,7 +517,7 @@ var arxivData = [
     "authors": "Alexei M. Frolov, Maria Belen Ruiz", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7424v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 52, 
@@ -527,7 +527,7 @@ var arxivData = [
     "authors": "Graciela Domenech, Hector Freytes, Christian De Ronde", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7417v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 53, 
@@ -537,7 +537,7 @@ var arxivData = [
     "authors": "N. A. McMahon, A. P. Lund, T. C. Ralph", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7415v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 54, 
@@ -547,7 +547,7 @@ var arxivData = [
     "authors": "Oleg Kim, Almut Beige", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7400v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 55, 
@@ -557,7 +557,7 @@ var arxivData = [
     "authors": "E. Celeghini, M. A. del Olmo, M. A. Velasco", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7380v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 56, 
@@ -567,7 +567,7 @@ var arxivData = [
     "authors": "Markus Karl, Boris Nowak, Thomas Gasenzer", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7368v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 57, 
@@ -577,7 +577,7 @@ var arxivData = [
     "authors": "Hongting Song, Guofeng Zhang, Zairong Xi", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7367v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 58, 
@@ -587,7 +587,7 @@ var arxivData = [
     "authors": "Y. M. Zhang, X. W. Li, W. Yang, G. R. Jin", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7353v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 59, 
@@ -597,7 +597,7 @@ var arxivData = [
     "authors": "Emilio Pisanty", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7329v1", 
-    "published": "Sunday 28 July"
+    "published": " (updated Sunday 28 July)"
   }, 
   {
     "index": 60, 
@@ -607,7 +607,7 @@ var arxivData = [
     "authors": "Guang Ping He", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7318v1", 
-    "published": "Saturday 27 July"
+    "published": " (updated Saturday 27 July)"
   }, 
   {
     "index": 61, 
@@ -617,7 +617,7 @@ var arxivData = [
     "authors": "L. Zhong, E. P. Menzel, R. Di Candia, P. Eder, M. Ihmig, A. Baust, M. Haeberlein, E. Hoffmann, K. Inomata, T. Yamamoto, Y. Nakamura, E. Solano, F. Deppe, A. Marx, R. Gross", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7285v1", 
-    "published": "Saturday 27 July"
+    "published": " (updated Saturday 27 July)"
   }, 
   {
     "index": 62, 
@@ -627,7 +627,7 @@ var arxivData = [
     "authors": "Boris Zhilinskii, Toshihiro Iwai", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7277v1", 
-    "published": "Saturday 27 July"
+    "published": " (updated Saturday 27 July)"
   }, 
   {
     "index": 63, 
@@ -637,7 +637,7 @@ var arxivData = [
     "authors": "Bijan Bagchi, Subhrajit Modak, Prasanta K. Panigrahi", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7246v1", 
-    "published": "Saturday 27 July"
+    "published": " (updated Saturday 27 July)"
   }, 
   {
     "index": 64, 
@@ -647,7 +647,7 @@ var arxivData = [
     "authors": "Teimuraz Nadareishvili, Anzor Khelashvili", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7972v1", 
-    "published": "Saturday 27 July"
+    "published": " (updated Saturday 27 July)"
   }, 
   {
     "index": 65, 
@@ -657,7 +657,7 @@ var arxivData = [
     "authors": "Anmer Daskin, Ananth Grama, Sabre Kais", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7220v1", 
-    "published": "Saturday 27 July"
+    "published": " (updated Saturday 27 July)"
   }, 
   {
     "index": 66, 
@@ -667,7 +667,7 @@ var arxivData = [
     "authors": "Qiang Zhou, Wei Zhang, Tianzhu Niu, Shuai Dong, Yidong Huang, Jiangde Peng", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7207v1", 
-    "published": "Saturday 27 July"
+    "published": " (updated Saturday 27 July)"
   }, 
   {
     "index": 67, 
@@ -677,7 +677,7 @@ var arxivData = [
     "authors": "N. Daniilidis, S. Gerber, G. Bolloten, M. Ramm, A. Ransford, E. Ulin-Avila, I. Talukdar, H. H\u00e4ffner", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7194v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 68, 
@@ -687,7 +687,7 @@ var arxivData = [
     "authors": "Daniel Mirell, Stuart Mirell", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7193v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 69, 
@@ -697,7 +697,7 @@ var arxivData = [
     "authors": "Victor Veitch, Seyed Ali Hamed Mousavian, Daniel Gottesman, Joseph Emerson", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7171v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 70, 
@@ -707,7 +707,7 @@ var arxivData = [
     "authors": "S. G. Chefranov, A. G. Chefranov, Vinay Venugopal", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7705v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 71, 
@@ -717,7 +717,7 @@ var arxivData = [
     "authors": "Mehdi Ahmadi, David Edward Bruschi, Nicolai Friis, Carlos Sab\u00edn, Gerardo Adesso, Ivette Fuentes", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7082v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 72, 
@@ -727,7 +727,7 @@ var arxivData = [
     "authors": "Vahid Azimi Mousolou, Carlo M. Canali, Erik Sj\u00f6qvist", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7073v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 73, 
@@ -737,7 +737,7 @@ var arxivData = [
     "authors": "Tzyh Haur Yang, Tam\u00e1s V\u00e9rtesi, Jean-Daniel Bancal, Valerio Scarani, Miguel Navascu\u00e9s", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7053v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 74, 
@@ -747,7 +747,7 @@ var arxivData = [
     "authors": "Ross Duncan, Simon Perdrix", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7048v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 75, 
@@ -757,7 +757,7 @@ var arxivData = [
     "authors": "Stefan Walter, Andreas Nunnenkamp, Christoph Bruder", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7044v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 76, 
@@ -767,7 +767,7 @@ var arxivData = [
     "authors": "Dominique Delande, Krzysztof Sacha", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7036v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 77, 
@@ -777,7 +777,7 @@ var arxivData = [
     "authors": "Peter Degenfeld-Schonburg, Michael J. Hartmann", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7027v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 78, 
@@ -787,7 +787,7 @@ var arxivData = [
     "authors": "Miriam Backens", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7025v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 79, 
@@ -797,7 +797,7 @@ var arxivData = [
     "authors": "Rainer Kaltenbaek", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7021v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 80, 
@@ -807,7 +807,7 @@ var arxivData = [
     "authors": "Wolfgang Niedenzu, Stefan Sch\u00fctz, Hessam Habibian, Giovanna Morigi, Helmut Ritsch", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.7012v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 81, 
@@ -817,7 +817,7 @@ var arxivData = [
     "authors": "Markus Johansson, Marie Ericsson, Erik Sj\u00f6qvist, Andreas Osterloh", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6993v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 82, 
@@ -827,7 +827,7 @@ var arxivData = [
     "authors": "David Reeb, Daniel Reitzner, Michael M. Wolf", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6986v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 83, 
@@ -837,7 +837,7 @@ var arxivData = [
     "authors": "Tetsufumi Tanamoto", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6970v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 84, 
@@ -847,7 +847,7 @@ var arxivData = [
     "authors": "Adam Miranowicz, Malgorzata Paprzycka, Anirban Pathak, Franco Nori", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6950v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 85, 
@@ -857,7 +857,7 @@ var arxivData = [
     "authors": "Yuji Sekino, Satoshi Ishizaka", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6926v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 86, 
@@ -867,7 +867,7 @@ var arxivData = [
     "authors": "G. Vacanti, R. Fazio, S. Montangero, G. M. Palma, M. Paternostro, V. Vedral", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6922v2", 
-    "published": "Friday 26 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 87, 
@@ -877,7 +877,7 @@ var arxivData = [
     "authors": "Valeriy I. Sbitnev", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6920v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 88, 
@@ -887,7 +887,7 @@ var arxivData = [
     "authors": "Yan Li, Hong-Yi Su, Fu-Lin Zhang, Jing-Ling Chen, Chunfeng Wu, L. C. Kwek", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6912v1", 
-    "published": "Friday 26 July"
+    "published": " (updated Friday 26 July)"
   }, 
   {
     "index": 89, 
@@ -897,7 +897,7 @@ var arxivData = [
     "authors": "Marcin Jarzyna, Konrad Banaszek, Rafal Demkowicz-Dobrzanski", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6871v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 90, 
@@ -907,7 +907,7 @@ var arxivData = [
     "authors": "Christian Schilling", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6858v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 91, 
@@ -917,7 +917,7 @@ var arxivData = [
     "authors": "Tomasz Sowi\u0144ski", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6852v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 92, 
@@ -927,7 +927,7 @@ var arxivData = [
     "authors": "Adrian Kent, Dami\u00e1n Pital\u00faa-Garc\u00eda", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6839v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 93, 
@@ -937,7 +937,7 @@ var arxivData = [
     "authors": "M. Cerkaski, R. G. Nazmitdinov", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6833v2", 
-    "published": "Thursday 25 July"
+    "published": " (updated Monday 29 July)"
   }, 
   {
     "index": 94, 
@@ -947,7 +947,7 @@ var arxivData = [
     "authors": "Dong Ding, Fengli Yan, Ting Gao", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6826v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 95, 
@@ -957,7 +957,7 @@ var arxivData = [
     "authors": "Meiyu Wang, Fengli Yan", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6820v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 96, 
@@ -967,7 +967,7 @@ var arxivData = [
     "authors": "F. F. Bellotti, T. Frederico, M. T. Yamashita, D. V. Fedorov, A. S. Jensen, N. T. Zinner", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6813v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 97, 
@@ -977,7 +977,7 @@ var arxivData = [
     "authors": "Bryan Dalton. Libby Heaney, John Goold, Barry Garraway, Thomas Busch", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6744v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 98, 
@@ -987,7 +987,7 @@ var arxivData = [
     "authors": "Thiago Prud\u00eancio, \u00c1lvaro Ferraz", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6725v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }, 
   {
     "index": 99, 
@@ -997,6 +997,6 @@ var arxivData = [
     "authors": "Pawel Kurzynski, Adan Cabello, Dagomir Kaszlikowski", 
     "source": "arxiv", 
     "link": "http://arxiv.org/pdf/1307.6710v1", 
-    "published": "Thursday 25 July"
+    "published": " (updated Thursday 25 July)"
   }
 ]

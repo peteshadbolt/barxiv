@@ -100,6 +100,7 @@ function update()
 
     // update the link
     var link='http://www.peteshadbolt.co.uk/barxiv.html?tags='+tags.join('_');
+    if (!$('#sortBox').is(':checked')){link+='\&nosort=1';}
     $('#bookMarkLink').text(link);
     $('#bookMarkLink').attr('href', 'link')}
 
@@ -118,5 +119,15 @@ function main()
     $('#sortBox').change(update);
 
     // set the input box from the query string
-    $('#inputbox').val(getQuery('tags').replace(/_/g, ' '));
+    var tags = getQuery('tags');
+    if (tags.length>0)
+    {
+        $('#inputbox').val(tags.replace(/_/g, ' '));
+        $('#introduction').remove();
+        update();
+    }
+
+    // see if we should sort
+    var nosort = getQuery('nosort');
+    $('#sortBox').prop('checked', nosort!='1');
 }
