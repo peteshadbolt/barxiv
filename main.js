@@ -20,12 +20,13 @@ function getPost(entry, matches)
 
     post+='<div>';
     post+='<a href="' + entry.link + '">' + entry.title + '</a>';
-    post+='<div id="matches' + String(entry.index)+ '" class="match">'+matches+'</span>'
+    post+='<div id="matches" class="match">'+matches+'</span>'
     post+='</div>';
 
-    post+='<div class="authors">';
-    post+=entry.authors;
-    post+=' <i>' + entry.published + '</i>'; 
+    post+='<div>';
+    post+='<div class="authors">'+entry.authors+'</div>';
+    post+='<div class="date">'+entry.published+'</div>';
+    post+='<br class="clear"/>';
     post+='</div>';
 
     post+='</div>';
@@ -78,31 +79,32 @@ function update()
     }
 
     // sort by number of matches
-    if ($('#sortBox').is(':checked'))
-    {
-        table.sort(function(a,b){ return b[2]-a[2]; });
-    }
+    //if ($('#sortBox').is(':checked'))
+    //{
+        //table.sort(function(a,b){ return b[2]-a[2]; });
+    //}
 
     // set the ordering
     $('#container').empty();  
 
     var rainbow = new Rainbow(); 
     rainbow.setNumberRange(0, max);
-    rainbow.setSpectrum('#eeeeff', '#ffdd88');
+    rainbow.setSpectrum('#eeeeff', '#ffdd77');
 
     for(var i=0; i < arxivData.length; i++)
     {
         var color = '#'+rainbow.colourAt(table[i][2]);        
-        var post=getPost(arxivData[table[i][0]], table[i][1].join(', '));
+        var post=getPost(arxivData[table[i][0]], table[i][1].join(' '));
         $('#container').append(post);      
+        //if (arxivData[table[i][0]].published=='Today'){color='red';}
         $('#post'+ String(arxivData[table[i][0]].index)).css('background-color', color);
     }    
 
     // update the link
-    var link='http://www.peteshadbolt.co.uk/barxiv.html?tags='+tags.join('_');
+    var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags.join('_');
     if (!$('#sortBox').is(':checked')){link+='\&nosort=1';}
     $('#bookMarkLink').text(link);
-    $('#bookMarkLink').attr('href', 'link')}
+    $('#bookMarkLink').attr('href', link)}
 
 
 // the main function, gets called when the page loads
@@ -115,8 +117,12 @@ function main()
     $('#inputbox').keyup(update);
     $('#inputbox').focus();
     
-    // bind the checkbox
+    // Bind the checkbox change
     $('#sortBox').change(update);
+
+    // Bind to clicking divs
+    //$('.post').click(function(){ $(this).slideUp(); });
+    $('div.post').click(function(){console.log('click');});
 
     // set the input box from the query string
     var tags = getQuery('tags');
