@@ -1,7 +1,4 @@
 import re
-import sys
-import feedparser 
-import json
 from datetime import datetime
 frequentwords=['is', 'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me', 'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 'person', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other']
 
@@ -24,7 +21,6 @@ def parse_arxiv_post((index, entry)):
     out['abstract']=entry['summary']
     out['authors']=', '.join(map(lambda x: x['name'], entry['authors']))
     out['search']=optimize_search(out['title']+out['abstract']+out['authors'])
-    #out['link']=entry['link']#.replace('abs', 'pdf')
     out['link']=entry['link'].replace('abs', 'pdf')
 
     t=entry['published'].split('T')[0]
