@@ -3,9 +3,19 @@ import sys
 import feedparser 
 import json
 from datetime import datetime
+frequentwords=['is', 'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at', 'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she', 'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me', 'when', 'make', 'can', 'like', 'time', 'no', 'just', 'him', 'know', 'take', 'person', 'into', 'year', 'your', 'good', 'some', 'could', 'them', 'see', 'other']
 
 def strip_authors(html): return re.sub('<[^>]*>', '', html)
 def strip_title(title): return title.split('(')[0]
+
+def optimize_search(s):
+    s=s.lower().replace('\n', ' ')
+    s=s.split(' ')
+    s=list(set(s))
+    s=map(lambda x: x.strip(), s)
+    s=filter(lambda x: not x in frequentwords, s)
+    s=' '.join(s)
+    return s
 
 def parse_arxiv_post((index, entry)):
     ''' parse a post from the arxiv '''
@@ -13,7 +23,7 @@ def parse_arxiv_post((index, entry)):
     out['title']=entry['title'].replace('\n', '')
     out['abstract']=entry['summary']
     out['authors']=', '.join(map(lambda x: x['name'], entry['authors']))
-    out['search']=(out['title']+out['abstract']+out['authors']).lower().replace('\n', ' ')
+    out['search']=optimize_search(out['title']+out['abstract']+out['authors'])
     #out['link']=entry['link']#.replace('abs', 'pdf')
     out['link']=entry['link'].replace('abs', 'pdf')
 

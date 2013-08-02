@@ -78,7 +78,10 @@ function update()
     }
 
     // sort by number of matches
-    table.sort(function(a,b){ return b[2]-a[2]; });
+    if ($('#sortBox').is(':checked'))
+    {
+        table.sort(function(a,b){ return b[2]-a[2]; });
+    }
 
     // set the ordering
     $('#container').empty();  
@@ -110,8 +113,10 @@ function main()
     // Bind to input box update
     $('#inputbox').keyup(update);
     $('#inputbox').focus();
+    
+    // bind the checkbox
+    $('#sortBox').change(update);
 
     // set the input box from the query string
     $('#inputbox').val(getQuery('tags').replace(/_/g, ' '));
-    //update();
 }

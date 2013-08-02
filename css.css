@@ -9,12 +9,15 @@ div.authors i{color:gray}
 
 div.match {margin-left: 20px; font-size: 9pt; font-family: monospace; display:inline; background-color: #ffffff}
 
-#introduction { padding:5px; margin:10px; background-color: #ffffaa; border-radius: 3px; font-size: 10pt; font-weight:bold}
+#introduction { padding:5px; margin:10px; background-color: #ffffaa; border-radius: 3px; font-size: 11pt; font-weight:bold}
+#introduction a {color:#000088;}
 
 #footer { font-size: 8pt; color: #ff8800; padding:20px; margin:20px; text-align:center;}
 #footer a { color: #883300 }
 
 #input {font-size:10pt; padding:5px; margin:10px; background-color: #ffdddd; border-radius: 3px;}
 #inputbox {width:100%}
+#input a {color:#000088; font-family:monospace; font-size:9pt }
+.soon {color:gray;}
 
 #logo{ position:fixed; bottom:5px; right: 15px;}
