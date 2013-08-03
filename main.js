@@ -181,8 +181,11 @@ function main()
     $('#sortBox').change(function(){update(true);});
     $('.changesource').click(function()
     {
-        loadFeed($(this).text()+'.json')
+        $('.changesource').css('border', 'none');
+        loadFeed($(this).text()+'.json');
+        $(this).css('border', '1px solid red');
     });
+    $('#firstChanger').css('border', '1px solid red');
 
     // Set up the input box from the query string and focus
     $('#sortBox').prop('checked', !(getQuery('nosort')=='1'));

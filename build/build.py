@@ -2,6 +2,8 @@ import re
 import json
 import arxiv
 import nature
+import science
+
 
 cutoff=100
 
@@ -32,9 +34,21 @@ def do_nature(url, filename):
     f=open('../%s.json' % filename, 'w')
     f.write(''); f.write(s); f.close()
 
-do_arxiv()
-do_nature('http://www.nature.com/nature/journal/vaop/ncurrent/rss.rdf', 'nature')
-do_nature('http://www.nature.com/nphoton/journal/vaop/ncurrent/rss.rdf', 'nphoton')
-do_nature('http://www.nature.com/nphys/journal/vaop/ncurrent/rss.rdf', 'nphys')
-do_nature('http://www.nature.com/ncomms/rss/all_index.rdf', 'ncomms')
+def do_science():
+    ''' load posts, filter them, sort them, and dump to JSON '''
+    print 'caching %s...' % 'science'
+    all_posts=science.get_all()
+    all_posts=filter(lambda x: x!=None, all_posts)
+    all_posts=sorted(all_posts, key=lambda x: x['epoch'], reverse=True)
+    all_posts=map(trim_authors, all_posts)
+    s=json.dumps(all_posts[:cutoff], indent=2)
+    f=open('../science.json', 'w')
+    f.write(''); f.write(s); f.close()
+
+do_science()
+#do_arxiv()
+#do_nature('http://www.nature.com/nature/journal/vaop/ncurrent/rss.rdf', 'nature')
+#do_nature('http://www.nature.com/nphoton/journal/vaop/ncurrent/rss.rdf', 'nphoton')
+#do_nature('http://www.nature.com/nphys/journal/vaop/ncurrent/rss.rdf', 'nphys')
+#do_nature('http://www.nature.com/ncomms/rss/all_index.rdf', 'ncomms')
 
