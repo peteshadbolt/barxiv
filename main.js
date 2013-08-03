@@ -1,8 +1,14 @@
-//run on startup
+// TODO: optimize performance, add science, nature, prl
+
+// Globals
+var rainbow = new Rainbow(); 
+rainbow.setSpectrum('#eeeeff', '#ffdd77');
+introductionExists = true;
+
+// Run on startup
 $(document).ready(main);
 
-
-// get the query string (http://www.mysite.com/index.php?x=x1&x=x2&x=x3)
+// Get the query string (http://www.mysite.com/index.php?x=x1&x=x2&x=x3)
 function getQuery(name) {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -10,113 +16,140 @@ function getQuery(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+function strip(s) { return s.replace(/^\s\s*/, '').replace(/\s\s*$/, ''); }
 
-// format a post
-function getPost(entry, matches)
+// Format a post
+function getPost(entry, matches, color)
 {
-    if (matches==undefined){matches='';}
+    //var postClass = entry.published=='Today' ? 'post' : 'smallpost';
     var post='';
-    post+='<div id="post' + String(entry.index)+ '" class="post">';
+    post+='<div class="post" style="background-color: ' + color + ' ;'; 
+    if (entry.published=='Today'){ post +='border: 1px solid #000000; ';}
+    post+='">';
 
     post+='<div>';
     post+='<a href="' + entry.link + '">' + entry.title + '</a>';
-    post+='<div id="matches' + String(entry.index)+ '" class="match">'+matches+'</span>'
+    if (matches.length>0){post+='<div id="matches" class="match">'+matches+'</span></div>';}
+    post+='<br class="clear"/>';
     post+='</div>';
 
-    post+='<div class="authors">';
-    post+=entry.authors;
-    post+=' <i>' + entry.published + '</i>'; 
+    post+='<div>';
+    post+='<div class="authors">'+entry.authors+'</div>';
+    post+='<div class="date">'+entry.published+'</div>';
+    post+='<br class="clear"/>';
+    post+='</div>';
+
+    post+='<div class="abstract">';
+    post+=entry.abstract;
     post+='</div>';
 
     post+='</div>';
     return post;
 }
 
-
-// this function populates the page
-function populate(jsonData)
-{
-    for (var i=0; i<jsonData.length; i++) 
-    { 
-        $('#container').append(getPost(jsonData[i]), '', ''); 
+// Parse the tags
+function parseTags(raw) { 
+    var rawtags=raw.replace(/,/g, ' ').split(' '); 
+    var tags=new Array();
+    for (var i=0; i<rawtags.length; i++)
+    {
+        if (rawtags[i].length>2){ tags.push(strip(rawtags[i])); }
     }
+    return tags;
 }
 
-// parse tags from the user
-function parseTags(raw) { return raw.replace(/,/g, ' ').split(' '); }
-
-// score a post
+// Score a post
 function getMatches(search, tags)
 {
-    var matches=[];
+    var matches=new Array();
     for (var i=0; i<tags.length; i++)
     {
-        var tag=tags[i].replace(/^\s\s*/, '').replace(/\s\s*$/, ''); 
-        if (tag.length>2 && search.indexOf(tag)!=-1){ matches.push(tags[i]); }
+        if (search.indexOf(tags[i])!=-1){ matches.push(tags[i]); }
     }
     return matches;
 }
 
-// update the ordering etc
+// Update the bookmark link
+function updateBookmarkLink(tags)
+{
+    var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags.join('_');
+    if (!$('#sortBox').is(':checked')){link+='\&nosort=1';}
+    $('#bookMarkLink').text(link);
+    $('#bookMarkLink').attr('href', link)
+}
+
+// Remove the introduction panel
+function removeIntroduction(speed)
+{
+    if (!introductionExists){return;}
+    if (speed=='slow'){ $('#introduction').fadeOut(500, function() {$('#introduction').remove();}); }
+    if (speed=='fast'){ $('#introduction').remove(); }
+    introductionExists=false;
+}
+
+// Update the full page
 function update()
 {
-    // clear the introduction if necessary
-    if ($('#introduction').length && $('#inputbox').val().length>2) 
-    { 
-        $('#introduction').fadeOut(500, function() {$('#introduction').remove();}); 
-    }
+    // Clear the introduction if necessary
+    if ($('#inputbox').val().length>2) {removeIntroduction('slow');}
 
-    // parse the user's command and score each post
+    // Parse the user's command 
     var tags = parseTags($('#inputbox').val());
-    var table = [];
-    var max = 1;
+    updateBookmarkLink(tags);
+
+    // Score each post
+    var table = new Array();
+    var max = 0;
     for (var i=0; i<arxivData.length; i++) 
     { 
         var matches=getMatches(arxivData[i].search, tags);
-        if (matches.length>max){max=matches.length;}
-        table.push([i, matches, matches.length]); 
+        if (matches.length>max){ max = matches.length; }
+        table.push({'index':i, 'matches':matches, 'score':matches.length }); 
     }
 
-    // sort by number of matches
-    if ($('#sortBox').is(':checked'))
-    {
-        table.sort(function(a,b){ return b[2]-a[2]; });
-    }
+    // Sort by number of matches
+    if ($('#sortBox').is(':checked') && max>0) { table.sort(function(a,b){ return b['score']-a['score']; }); }
 
-    // set the ordering
+    // Rebuild the table
     $('#container').empty();  
-
-    var rainbow = new Rainbow(); 
-    rainbow.setNumberRange(0, max);
-    rainbow.setSpectrum('#eeeeff', '#ffdd88');
-
-    for(var i=0; i < arxivData.length; i++)
+    rainbow.setNumberRange(0, max==0 ? 1 : max);
+    var s='';
+    for(var i=0; i < table.length; i++)
     {
-        var color = '#'+rainbow.colourAt(table[i][2]);        
-        var post=getPost(arxivData[table[i][0]], table[i][1].join(', '));
-        $('#container').append(post);      
-        $('#post'+ String(arxivData[table[i][0]].index)).css('background-color', color);
+        var row = table[i];
+        var index = row['index']
+        var matches = row['matches']
+        var score = row['score']
+        var color = '#'+rainbow.colourAt(score);        
+        s += getPost(arxivData[index], matches.join(' '), color);
     }    
+    $('#container').append(s);      
+    $('.abstract').hide();
+    $('.post').click(function(){$(this).find('.abstract').slideToggle(100);});
 
-    // update the link
-    var link='http://www.peteshadbolt.co.uk/barxiv.html?tags='+tags.join('_');
-    $('#bookMarkLink').text(link);
-    $('#bookMarkLink').attr('href', 'link')}
+}
 
+// Set up the input box
+function setInputBox(tags)  
+{
+    if (tags.length<=0) {return;}
+    $('#inputbox').val(tags.replace(/_/g, ' '));
+    removeIntroduction('fast');
+    update();
+}
 
-// the main function, gets called when the page loads
+// Gets called when the page loads
 function main() 
 {
-    // fill the screen
-    populate(arxivData);
-
-    // Bind to input box update
+    // Bind update to form changes
     $('#inputbox').keyup(update);
-    $('#inputbox').focus();
-    
-    // bind the checkbox
     $('#sortBox').change(update);
 
-    // set the input box from the query string
-    $('#inputbox').val(getQuery('tags').replace(/_/g, ' '));
+    // Set up the input box from the query string and focus
+    $('#sortBox').prop('checked', !(getQuery('nosort')=='1'));
+    setInputBox(getQuery('tags'));
+    $('#inputbox').focus(); 
+
+    // Fill the screen with posts
+    update();
 }
