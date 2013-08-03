@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 
 <head>
@@ -8,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css.css">
 
 <!--load the json of the arxiv-->
-<script type="text/javascript" src="arxiv.json"></script>
+<!--<script type="text/javascript" src="arxiv.json"></script>-->
 
 <!--import jquery, gradients, and the main script-->
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -19,32 +20,44 @@
 
 <body>
 
-<img id='logo' src='logo.png'/>
 
 <div id='introduction'>
-<tt>BARXIV</tt> shows the latest 100 papers posted to the <a href='http://arxiv.org'>arXiv</a>. Filter and highlight by author or keyword.
+<tt>BARXIV</tt> shows the latest 100 papers posted to the <a href='http://arxiv.org'>arXiv</a>. Prioritize your reading by author or keyword.
 </div>
 
 <div id='input'>
-<b>Type some keywords and authors into the box below.</b> 
-<div>
-<input type='text' id='inputbox' placeholder='e.g. quantum photon chip aspect brunner '/>
-<input type='checkbox' checked='checked' id='sortBox'>Sort
-<input type='checkbox'><span class='soon'>Science</span>
-<input type='checkbox'><span class='soon'>Nature</span>
-<input type='checkbox'><span class='soon'>NPG</span>
-<input type='checkbox'><span class='soon'>PRL</span>
-<!--<input type='checkbox'>+NPhoton+NPhys-->
-<br>
-Bookmark this link (or set it as your homepage) to save your settings: <a id='bookMarkLink' href='.'>http://www.peteshadbolt.co.uk/barxiv.html?</a>
-</div>
+
+<div> 
+<b>Type some keywords and authors into the box below.</b>
+Then bookmark <a id='bookMarkLink' href='#'>this link</a> to save your settings. 
 </div>
 
+<div id='inputHolder'> <input type='text' id='inputbox' placeholder='e.g. quantum photon chip aspect brunner '/> </div>
+
+<div id='settingsHolder'>
+
+<span class='changesource'>quant-ph</span>
+<span class='changesource'>nature</span>  
+<span class='changesource'>nphoton</span>  
+<span class='changesource'>ncomms</span>  
+<span class='changesource'>science</span>  
+<span class='changesource'>prl</span>  
+
+<span id='checkBoxHolder'><input type='checkbox' checked='checked' id='sortBox'> Sort</span>
+</div>
+
+</div>
+
+<!--The main container where all our papers live-->
 <div id="container">
 </div>
 
+<center>
+<img id='logo' src='logo.png'/>
+</center>
+
 <div id="footer">
-    Made by <a href="http://www.peteshadbolt.co.uk">Pete Shadbolt</a> using the <a href='http://arxiv.org'>arXiv</a> API.
+Made by <a href="http://www.peteshadbolt.co.uk">Pete Shadbolt</a> using the <a href='http://arxiv.org'>arXiv</a> API.
 </div>
 
 

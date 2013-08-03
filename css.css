@@ -2,25 +2,37 @@ body{font-family:'arial', sans-serif}
 
 .clear { clear:both; }
 
+/*posts*/
 div.post { padding:5px; margin: 10px; border-radius:3px; }
 div.post a { font-size: 11pt; font-weight: bold; color:black; text-decoration:none;  }
 div.post a:hover { text-decoration:underline;}
 
+/*post components*/
 div.match { margin-left: 5px; font-size: 9pt; font-family: monospace; display:inline; float:right; background-color: #ffffff;}
 div.authors { display:inline; font-size:9pt; }
 div.date { display:inline; float:right; font-size:9pt; font-style:italic; color:#555555;}
+div.newPost { display:inline; float:right; font-size:9pt; font-weight:bold; color:#000000;}
+div.abstract { font-size: 12pt; margin: 10px 10px; padding: 5px; text-align: justify; font-family: serif; background-color: white; border-radius:3px;}
 
-div.abstract { font-size: 10pt; margin: 10px 10px; padding: 5px; text-align: justify; font-family: serif; background-color: white; border-radius:3px;}
+/*page sections*/
 
+/*introduction*/
 #introduction { padding:5px; margin:10px; background-color: #ffffaa; border-radius: 3px; font-size: 11pt; font-weight:bold; border: 1px solid #ffff00;}
 #introduction a {color:#000088;}
 
-#footer { font-size: 8pt; color: #ff8800; padding:20px; margin:20px; text-align:center;}
+/*loader*/
+#loading { margin: 10px; padding: 20px; border-radius:3px; font-size:20pt text-align: center;}
+
+/*settings/input*/
+#input {font-size:10pt; padding:5px; margin:10px; background-color: #ffdddd; border-radius: 3px; border: 1px solid #ffcccc;}
+#inputbox {width:100%; }
+#bookMarkLink {color:#000088; }
+.changesource {cursor: pointer; background-color: #ffbbbb; padding:3px; border-radius:2px; color: black; }
+#inputHolder{padding-right: 5px; padding-top:3px}
+#settingsHolder{padding-top:10px; padding-bottom:5px;}
+#checkBoxHolder{ float:right; }
+
+/*footer*/
+#footer { font-size: 8pt; color: #ff5500; padding:10px; margin:10px; text-align:center;}
 #footer a { color: #883300 }
 
-#input {font-size:10pt; padding:5px; margin:10px; background-color: #ffdddd; border-radius: 3px; border: 1px solid #ffcccc;}
-#inputbox {width:100%}
-#input a {color:#000088; font-family:monospace; font-size:9pt }
-.soon {color:gray;}
-
-#logo { position:fixed; bottom:5px; right: 15px;}

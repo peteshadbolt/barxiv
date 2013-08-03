@@ -1,13 +1,18 @@
-// TODO: optimize performance, add science, nature, prl, better TODAY, keyboard shortcuts
+// TODO: add science, npg, prl, keyboard shortcuts, 
 
 // Globals
 var rainbow = new Rainbow(); 
 rainbow.setSpectrum('#eeeeff', '#ffdd77');
 introductionExists = true;
 var lastInputValue='';
+var feedData='';
+var intervalID='none';
 
 // Run on startup
 $(document).ready(main);
+
+function strip(s) { return s.replace(/^\s\s*/, '').replace(/\s\s*$/, ''); }
+
 
 // Get the query string (http://www.mysite.com/index.php?x=x1&x=x2&x=x3)
 function getQuery(name) {
@@ -17,36 +22,42 @@ function getQuery(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-function strip(s) { return s.replace(/^\s\s*/, '').replace(/\s\s*$/, ''); }
 
 // Format a post
 function getPost(entry, matches, color)
 {
-    //var postClass = entry.published=='Today' ? 'post' : 'smallpost';
+    // ALL of the below should be done by python! just bung in the matches and the background color!
     var post='';
-    post+='<div class="post" style="background-color: ' + color + ' ;'; 
-    if (entry.published=='Today'){ post +='border: 1px solid #000000; ';}
-    post+='">';
+    post+='<div class="post" style="background-color: ' + color + ';">';
 
+    // Title and matches
     post+='<div>';
-    post+='<a href="' + entry.link + '">' + entry.title + '</a>';
-    if (matches.length>0){post+='<div id="matches" class="match">'+matches+'</span></div>';}
+    post+='<a href="' + entry.link + '" target="_blank">' + entry.title + '</a>';
+    if (matches.length>0) { post+='<div id="matches" class="match">'+matches+'</span></div>'; }
     post+='<br class="clear"/>';
     post+='</div>';
 
+    // Authors and date
     post+='<div>';
     post+='<div class="authors">'+entry.authors+'</div>';
-    post+='<div class="date">'+entry.published+'</div>';
+    if (entry.published=="New")
+    {
+        post+='<div class="newPost">'+entry.published+'</div>';
+    } else 
+    {
+        post+='<div class="date">'+entry.published+'</div>';
+    }
+
     post+='<br class="clear"/>';
     post+='</div>';
 
-    post+='<div class="abstract">';
-    post+=entry.abstract;
-    post+='</div>';
+    // The abstract
+    post+='<div class="abstract" style="display: none;">'+entry.abstract+'</div>';
 
     post+='</div>';
     return post;
 }
+
 
 // Parse the tags
 function parseTags(raw) { 
@@ -59,6 +70,7 @@ function parseTags(raw) {
     return tags;
 }
 
+
 // Score a post
 function getMatches(search, tags)
 {
@@ -70,14 +82,15 @@ function getMatches(search, tags)
     return matches;
 }
 
+
 // Update the bookmark link
 function updateBookmarkLink(tags)
 {
     var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags.join('_');
     if (!$('#sortBox').is(':checked')){link+='\&nosort=1';}
-    $('#bookMarkLink').text(link);
     $('#bookMarkLink').attr('href', link)
 }
+
 
 // Remove the introduction panel
 function removeIntroduction(speed)
@@ -87,6 +100,7 @@ function removeIntroduction(speed)
     if (speed=='fast'){ $('#introduction').remove(); }
     introductionExists=false;
 }
+
 
 // Update the full page
 function update(force)
@@ -106,9 +120,9 @@ function update(force)
     // Score each post
     var table = new Array();
     var max = 0;
-    for (var i=0; i<arxivData.length; i++) 
+    for (var i=0; i<feedData.length; i++) 
     { 
-        var matches=getMatches(arxivData[i].search, tags);
+        var matches=getMatches(feedData[i].search, tags);
         if (matches.length>max){ max = matches.length; }
         table.push({'index':i, 'matches':matches, 'score':matches.length }); 
     }
@@ -119,21 +133,24 @@ function update(force)
     // Rebuild the table
     $('#container').empty();  
     rainbow.setNumberRange(0, max==0 ? 1 : max);
-    var s='';
+    var s='<div>';
     for(var i=0; i < table.length; i++)
     {
         var row = table[i];
-        var index = row['index']
-        var matches = row['matches']
-        var score = row['score']
-        var color = '#'+rainbow.colourAt(score);        
-        s += getPost(arxivData[index], matches.join(' '), color);
+        var color = '#'+rainbow.colourAt(row['score']);        
+        s += getPost(feedData[row['index']], row['matches'].join(' '), color);
     }    
+    s+='</div>';
+
+    // Put it in there
     $('#container').append(s);      
-    $('.abstract').hide();
+    
+    // Hide all the abstracts
+    //$('.abstract').hide();
     $('.post').click(function(){$(this).find('.abstract').slideToggle(100);});
 
 }
+
 
 // Set up the input box
 function setInputBox(tags)  
@@ -144,19 +161,34 @@ function setInputBox(tags)
     update();
 }
 
+
+// load a feed
+function loadFeed(filename)
+{
+    if (intervalID!='none') {clearInterval(intervalID);}
+    $.getJSON(filename, function( json ) {
+        feedData = json;
+        intervalID = setInterval(update, 250);
+        update(true);
+    });
+}
+
+
 // Gets called when the page loads
 function main() 
 {
     // Bind update to form changes
-    //$('#inputbox').keyup(update);
     $('#sortBox').change(function(){update(true);});
+    $('.changesource').click(function()
+    {
+        loadFeed($(this).text()+'.json')
+    });
 
     // Set up the input box from the query string and focus
     $('#sortBox').prop('checked', !(getQuery('nosort')=='1'));
     setInputBox(getQuery('tags'));
     $('#inputbox').focus(); 
 
-    // Fill the screen with posts
-    var intervalID = setInterval(update, 300);
-    update(true);
+    // Load the json and fill the screen
+    loadFeed('quant-ph.json');
 }
