@@ -1,9 +1,10 @@
-// TODO: optimize performance, add science, nature, prl
+// TODO: optimize performance, add science, nature, prl, better TODAY, keyboard shortcuts
 
 // Globals
 var rainbow = new Rainbow(); 
 rainbow.setSpectrum('#eeeeff', '#ffdd77');
 introductionExists = true;
+var lastInputValue='';
 
 // Run on startup
 $(document).ready(main);
@@ -88,13 +89,18 @@ function removeIntroduction(speed)
 }
 
 // Update the full page
-function update()
+function update(force)
 {
+    // Skip if the input box has not changed
+    var inputValue=$('#inputbox').val()
+    if (lastInputValue == inputValue && !force){return;}
+    lastInputValue=inputValue;
+
     // Clear the introduction if necessary
-    if ($('#inputbox').val().length>2) {removeIntroduction('slow');}
+    if (inputValue.length>2) {removeIntroduction('slow');}
 
     // Parse the user's command 
-    var tags = parseTags($('#inputbox').val());
+    var tags = parseTags(inputValue);
     updateBookmarkLink(tags);
 
     // Score each post
@@ -142,8 +148,8 @@ function setInputBox(tags)
 function main() 
 {
     // Bind update to form changes
-    $('#inputbox').keyup(update);
-    $('#sortBox').change(update);
+    //$('#inputbox').keyup(update);
+    $('#sortBox').change(function(){update(true);});
 
     // Set up the input box from the query string and focus
     $('#sortBox').prop('checked', !(getQuery('nosort')=='1'));
@@ -151,5 +157,6 @@ function main()
     $('#inputbox').focus(); 
 
     // Fill the screen with posts
-    update();
+    var intervalID = setInterval(update, 300);
+    update(true);
 }
