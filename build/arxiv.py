@@ -31,6 +31,7 @@ def parse_rss((index, entry)):
     ''' parse a post from the arxiv '''
     out={}
     out['title']='<img src="today.png"/>'
+    #out['title']='&#8614 '
     out['title']+=strip_title(entry['title'].replace('\n', ''))
     if 'UPDATED' in entry['title']: return None
     out['abstract']=strip_tags(entry['summary'])

@@ -26,10 +26,10 @@ div.abstract { font-size: 12pt; margin: 10px 10px; padding: 5px; text-align: jus
 
 /*settings/input*/
 #input {font-size:10pt; padding:5px; margin:10px; background-color: #ffdddd; border-radius: 3px; border: 1px solid #ffcccc;}
-#inputbox {width:100%; }
+#inputbox {width:100%; padding:2px; }
+#inputHolder{padding-right: 10px; padding-top:3px}
 #bookMarkLink {color:#000088; }
 .changesource {cursor: pointer; background-color: #ffbbbb; padding:2px 5px; border-radius:2px; color: black; }
-#inputHolder{padding-right: 5px; padding-top:3px}
 #settingsHolder{padding-top:10px; padding-bottom:5px;}
 #checkBoxHolder{ float:right; }
 
