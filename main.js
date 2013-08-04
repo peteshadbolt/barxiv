@@ -166,7 +166,9 @@ function setInputBox(tags)
 function loadFeed(filename)
 {
     if (intervalID!='none') {clearInterval(intervalID);}
+    $('#spinner').show()
     $.getJSON(filename, function( json ) {
+        $('#spinner').hide()
         feedData = json;
         intervalID = setInterval(update, 250);
         update(true);

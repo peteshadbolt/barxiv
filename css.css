@@ -22,6 +22,7 @@ div.abstract { font-size: 12pt; margin: 10px 10px; padding: 5px; text-align: jus
 
 /*loader*/
 #loading { margin: 10px; padding: 20px; border-radius:3px; font-size:20pt text-align: center;}
+#spinner {float:right;}
 
 /*settings/input*/
 #input {font-size:10pt; padding:5px; margin:10px; background-color: #ffdddd; border-radius: 3px; border: 1px solid #ffcccc;}
