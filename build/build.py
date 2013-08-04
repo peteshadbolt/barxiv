@@ -1,3 +1,5 @@
+# filter duplicates
+
 import re
 import json
 import arxiv
@@ -57,8 +59,8 @@ def do_prl():
     f.write(''); f.write(s); f.close()
 
 #do_science()
-#do_arxiv()
-do_prl()
+do_arxiv()
+#do_prl()
 #do_nature('http://www.nature.com/nature/journal/vaop/ncurrent/rss.rdf', 'nature')
 #do_nature('http://www.nature.com/nphoton/journal/vaop/ncurrent/rss.rdf', 'nphoton')
 #do_nature('http://www.nature.com/nphys/journal/vaop/ncurrent/rss.rdf', 'nphys')

@@ -1,39 +1,39 @@
-body{font-family:'arial', sans-serif}
+body{font-family:'arial', sans-serif; font-size:11pt; 
+}
 
 .clear { clear:both; }
 
 /*posts*/
-div.post { padding:5px; margin: 10px; border-radius:3px; }
-div.post a { font-size: 11pt; font-weight: bold; color:black; text-decoration:none;  }
+div.post { padding: 0.4em; margin: 0.6em; border-radius: 0.3em; }
+div.post a { font-size: 1em; font-weight: bold; color:black; text-decoration:none;  }
 div.post a:hover { text-decoration:underline;}
 
 /*post components*/
-div.match { margin-left: 5px; font-size: 9pt; font-family: monospace; display:inline; float:right; background-color: #ffffff;}
-div.authors { display:inline; font-size:9pt; }
-div.date { display:inline; float:right; font-size:9pt; font-style:italic; color:#555555;}
-div.newPost { display:inline; float:right; font-size:9pt; font-weight:bold; color:#000000;}
-div.abstract { font-size: 12pt; margin: 10px 10px; padding: 5px; text-align: justify; font-family: serif; background-color: white; border-radius:3px;}
+div.match { margin-left: 0.45em; font-size: 0.8em; font-family: monospace; display:inline; float:right; background-color: #ffffff;}
+div.authors { display:inline; font-size: 0.9em; }
+div.date { display:inline; float:right; font-size: 0.9em; font-style:italic; color:#555555;}
+div.newPost { display:inline; float:right; font-size:0.9em; font-weight:bold; color:#000000;}
+div.abstract { font-size: 1em; margin: 0.6em; padding: 0.45em; text-align: justify; font-family: serif; background-color: white; border-radius:0.3em;}
 
 /*page sections*/
 
 /*introduction*/
-#introduction { padding:5px; margin:10px; background-color: #ffffaa; border-radius: 3px; font-size: 11pt; border: 1px solid #ffff00;}
+#introduction { padding:0.45em; margin: 0.6em; background-color: #ffffaa; border-radius: 0.3em; font-size: 1em; border: 1px solid #ffff00;}
 #introduction a {color:#000088;}
 
 /*loader*/
-#loading { margin: 10px; padding: 20px; border-radius:3px; font-size:20pt text-align: center;}
 #spinner {float:right;}
 
 /*settings/input*/
-#input {font-size:10pt; padding:5px; margin:10px; background-color: #ffdddd; border-radius: 3px; border: 1px solid #ffcccc;}
-#inputbox {width:100%; padding:2px; }
-#inputHolder{padding-right: 10px; padding-top:3px}
+#input {font-size:1em; padding:0.45em; margin: 0.6em; background-color: #ffdddd; border-radius: 0.3em; border: 1px solid #ffcccc;}
+#inputbox {width:100%; padding:0.2em; font-size:1em;}
+#inputHolder{padding-right:  0.6em; padding-top: 0.2em}
 #bookMarkLink {color:#000088; }
-.changesource {cursor: pointer; background-color: #ffbbbb; padding:2px 5px; border-radius:2px; color: black; }
-#settingsHolder{padding-top:10px; padding-bottom:5px;}
-#checkBoxHolder{ float:right; }
+.changesource {cursor: pointer; margin: 0.1em 0.1em; font-size: 0.9em; background-color: #ffbbbb; padding: 0.2em 0.45em; border-radius: 0.3em; color: black; display:inline-block;}
+#settingsHolder{padding-top: 0.6em; padding-bottom:0.25em;}
+#checkBoxHolder{ float:right; margin: 0.1em}
 
 /*footer*/
-#footer { font-size: 8pt; color: #ff5500; padding:10px; margin:10px; text-align:center;}
+#footer { font-size: .9em; color: #ff5500; padding: 0.6em; margin: 0.6em; text-align:center;}
 #footer a { color: #883300 }
 

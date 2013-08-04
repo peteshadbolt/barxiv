@@ -15,6 +15,7 @@ def parse_api((index, entry)):
     ''' parse a post from the arxiv '''
     out={}
     out['title']=entry['title'].replace('\n', '')
+    out['id']=entry['id']
     out['abstract']=strip_tags(entry['summary'])
     out['authors']=', '.join(map(lambda x: x['name'], entry['authors']))
     out['search']=optimize_search(out['title']+out['abstract']+out['authors'])
@@ -31,9 +32,9 @@ def parse_rss((index, entry)):
     ''' parse a post from the arxiv '''
     out={}
     out['title']='<img src="today.png"/>'
-    #out['title']='&#8614 '
+    out['id']=entry['id']
     out['title']+=strip_title(entry['title'].replace('\n', ''))
-    if 'UPDATED' in entry['title']: return None
+    #if 'UPDATED' in entry['title']: return None
     out['abstract']=strip_tags(entry['summary'])
     out['authors']=strip_authors(entry['author'])
     out['search']=optimize_search(out['title']+out['abstract']+out['authors'])
@@ -60,4 +61,21 @@ def get_all(max_results=100):
     ''' get all posts from the arxiv '''
     api_posts=get_api(max_results)
     rss_posts=get_rss(max_results)
-    return api_posts+rss_posts
+    posts=api_posts+rss_posts
+    posts=filter(lambda x: x!=None, posts)
+
+    # remove dupes
+    unique_posts=[]
+    used_ids=[]
+    for post in posts:
+        ft=strip_tags(post['title'].lower()).replace(' ', '').replace('.', '').strip()
+        if not ft in used_ids:
+            unique_posts.append(post)
+            used_ids.append(ft)
+
+    print '\n'.join(map(lambda x:x.encode('ascii', 'ignore'), used_ids))
+    return unique_posts
+
+if __name__=='__main__':
+    posts=get_all()
+
