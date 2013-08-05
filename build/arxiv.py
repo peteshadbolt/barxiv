@@ -34,7 +34,7 @@ def parse_rss((index, entry)):
     out['title']='<img src="today.png"/>'
     out['id']=entry['id']
     out['title']+=strip_title(entry['title'].replace('\n', ''))
-    #if 'UPDATED' in entry['title']: return None
+    if 'UPDATED' in entry['title']: return None
     out['abstract']=strip_tags(entry['summary'])
     out['authors']=strip_authors(entry['author'])
     out['search']=optimize_search(out['title']+out['abstract']+out['authors'])
@@ -60,8 +60,8 @@ def get_rss(max_results=100):
 def get_all(max_results=100):
     ''' get all posts from the arxiv '''
     api_posts=get_api(max_results)
-    rss_posts=get_rss(max_results)
-    posts=api_posts+rss_posts
+    rss_posts=list(reversed(get_rss(max_results)))
+    posts=rss_posts+api_posts
     posts=filter(lambda x: x!=None, posts)
 
     # remove dupes
@@ -73,7 +73,7 @@ def get_all(max_results=100):
             unique_posts.append(post)
             used_ids.append(ft)
 
-    print '\n'.join(map(lambda x:x.encode('ascii', 'ignore'), used_ids))
+    #print '\n'.join(map(lambda x:x.encode('ascii', 'ignore'), used_ids))
     return unique_posts
 
 if __name__=='__main__':

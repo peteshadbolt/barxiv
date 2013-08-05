@@ -31,7 +31,7 @@ div.abstract { font-size: 1em; margin: 0.6em; padding: 0.45em; text-align: justi
 #bookMarkLink {color:#000088; }
 .changesource {cursor: pointer; margin: 0.1em 0.1em; font-size: 0.9em; background-color: #ffbbbb; padding: 0.2em 0.45em; border-radius: 0.3em; color: black; display:inline-block;}
 #settingsHolder{padding-top: 0.6em; padding-bottom:0.25em;}
-#checkBoxHolder{ float:right; margin: 0.1em}
+#checkBoxHolder{ float:right; margin: 0.1em; display:inline-block;}
 
 /*footer*/
 #footer { font-size: .9em; color: #ff5500; padding: 0.6em; margin: 0.6em; text-align:center;}

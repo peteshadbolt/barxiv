@@ -1,4 +1,4 @@
-// TODO: add science, npg, prl, keyboard shortcuts, 
+//prl add science, npg, prl, keyboard shortcuts, 
 
 // Globals
 var rainbow = new Rainbow(); 
@@ -7,6 +7,7 @@ introductionExists = true;
 var lastInputValue='';
 var feedData='';
 var intervalID='none';
+var startFeed='quant-ph';
 
 // Run on startup
 $(document).ready(main);
@@ -88,6 +89,7 @@ function updateBookmarkLink(tags)
 {
     var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags.join('_');
     if (!$('#sortBox').is(':checked')){link+='\&nosort=1';}
+    if (startFeed!='quant-ph'){link+='\&source='+startFeed;}
     $('#bookMarkLink').attr('href', link)
 }
 
@@ -185,15 +187,19 @@ function main()
     {
         $('.changesource').css('border', 'none');
         loadFeed($(this).text()+'.json');
+        startFeed=$(this).text();
         $(this).css('border', '1px solid red');
     });
-    $('#firstChanger').css('border', '1px solid red');
+
 
     // Set up the input box from the query string and focus
     $('#sortBox').prop('checked', !(getQuery('nosort')=='1'));
     setInputBox(getQuery('tags'));
     $('#inputbox').focus(); 
+    userStartFeed=getQuery('source');
+    if (userStartFeed!=''){startFeed=userStartFeed;}
 
     // Load the json and fill the screen
-    loadFeed('quant-ph.json');
+    $('#change-'+startFeed).css('border', '1px solid red');
+    loadFeed(startFeed+'.json');
 }

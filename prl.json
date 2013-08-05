@@ -5,9 +5,9 @@
     "title": "Experimental Distillation of Quantum Nonlocality", 
     "abstract": "We report the first experimental demonstration of distillation of quantum nonlocality, confirming the recent theoretical protocol [  Phys. Rev. Lett. 102 120401 (2009)]. Quantum nonlocality is described by a correlation box with binary inputs and outputs, and the nonlocal boxes are realized through ...", 
     "authors": "C. Zu, D.-L. Deng, P.-Y. Hou, X.-Y. Chang, F. Wang, and L.-M. Duan", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.050405", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 1, 
@@ -15,9 +15,9 @@
     "title": "Universal Superfluid Transition and Transport Properties of Two-Dimensional Dirty Bosons", 
     "abstract": "We study the phase diagram of two-dimensional, interacting bosons in the presence of a correlated disorder in continuous space, by using large-scale quantum Monte\u00a0Carlo simulations at finite temperature. We show that the superfluid transition is strongly protected against disorder. It remains of the...", 
     "authors": "Giuseppe Carleo, Guilhem Bo\u00e9ris, Markus Holzmann, and Laurent Sanchez-Palencia", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.050406", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 2, 
@@ -25,9 +25,9 @@
     "title": "High-Fidelity Teleportation of Continuous-Variable Quantum States Using Delocalized Single Photons", 
     "abstract": "Traditional continuous-variable teleportation can only approach unit fidelity in the limit of an infinite (and unphysical) amount of squeezing. We describe a new method for continuous-variable teleportation that approaches unit fidelity with finite resources. The protocol is not based on squeezed st...", 
     "authors": "Ulrik L. Andersen and Timothy C. Ralph", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.050504", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 3, 
@@ -35,9 +35,9 @@
     "title": "Time-Periodic Solutions in an Einstein AdS\u2013Massless-Scalar-Field System", 
     "abstract": "We construct time-periodic solutions for a system of a self-gravitating massless scalar field, with a negative cosmological constant, in d+1 spacetime dimensions at spherical symmetry, both perturbatively and numerically. We estimate the convergence radius of the formally obtained perturbative serie...", 
     "authors": "Maciej Maliborski and Andrzej Rostworowski", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.051102", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 4, 
@@ -45,9 +45,9 @@
     "title": "WZ Production in Association with Two Jets at Next-to-Leading Order in QCD", 
     "abstract": "We report on the calculation of W<", 
     "authors": "Francisco Campanario, Matthias Kerner, Le Duc Ninh, and Dieter Zeppenfeld", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.052003", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 5, 
@@ -55,9 +55,9 @@
     "title": "Measurement of J/\u03c8 Azimuthal Anisotropy in Au+Au Collisions at sqrt[s_{NN}]=200\u2009\u2009GeV", 
     "abstract": "The measurement of J/\u03c8 azimuthal anisotropy is presented as a function of transverse momentum for different centralities in Au+Au collisions at \u221asNN=200\u2009\u2009GeV. The measured J/\u03c8 elliptic flow is consistent with zero within errors for transverse momentum between 2 and 10\u2009\u2009GeV/c. Our measurement suggest...", 
     "authors": "L. Adamczyk et al. (STAR Collaboration)", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.052301", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 6, 
@@ -65,9 +65,9 @@
     "title": "Measurement of the T+T Neutron Spectrum Using the National Ignition Facility", 
     "abstract": "Neutron time-of-flight spectra from inertial confinement fusion experiments with tritium-filled targets have been measured at the National Ignition Facility. These spectra represent a significant improvement in energy resolution and statistics over previous measurements, and afford the first definit...", 
     "authors": "D. B. Sayre et al.", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.052501", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 7, 
@@ -75,9 +75,9 @@
     "title": "Giant Cross\u2013Kerr Effect for Propagating Microwaves Induced by an Artificial Atom", 
     "abstract": "We investigate the effective interaction between two microwave fields, mediated by a transmon-type superconducting artificial atom which is strongly coupled to a coplanar transmission line. The interaction between the fields and atom produces an effective cross\u2013Kerr coupling. We demonstrate average ...", 
     "authors": "Io-Chun Hoi, Anton F. Kockum, Tauno Palomaki, Thomas M. Stace, Bixuan Fan, Lars Tornberg, Sankar R. Sathyamoorthy, G\u00f6ran Johansson, Per Delsing, and C. M. Wilson", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.053601", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 8, 
@@ -85,9 +85,9 @@
     "title": "Nonlinear Interaction Effects in a Strongly Driven Optomechanical Cavity", 
     "abstract": "We consider how nonlinear interaction effects can manifest themselves and even be enhanced in a strongly driven optomechanical system. Using a Keldysh Green\u2019s function approach, we calculate modifications to the cavity density of states due to both linear and nonlinear optomechanical interactions, s...", 
     "authors": "Marc-Antoine Lemonde, Nicolas Didier, and Aashish A. Clerk", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.053602", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 9, 
@@ -95,9 +95,9 @@
     "title": "Signatures of Nonlinear Cavity Optomechanics in the Weak Coupling Regime", 
     "abstract": "We identify signatures of the intrinsic nonlinear interaction between light and mechanical motion in cavity optomechanical systems. These signatures are observable even when the cavity linewidth exceeds the optomechanical coupling rate. A strong laser drive red detuned by twice the mechanical freque...", 
     "authors": "K. B\u00f8rkje, A. Nunnenkamp, J. D. Teufel, and S. M. Girvin", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.053603", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 10, 
@@ -105,9 +105,9 @@
     "title": "Nanometric Resolution with Far-Field Optical Profilometry", 
     "abstract": "We show experimentally that a resolution far beyond that of conventional far-field optical profilometers can be reached with optical diffraction tomography. This result is obtained in the presence of multiple scattering when using an adapted inverse scattering algorithm for profile reconstruction. T...", 
     "authors": "S. Arhab, G. Soriano, Y. Ruan, G. Maire, A. Talneau, D. Sentenac, P. C. Chaumet, K. Belkebir, and H. Giovannini", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.053902", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 11, 
@@ -115,9 +115,9 @@
     "title": "Hydrodynamic Supercontinuum", 
     "abstract": "We report the experimental observation of multi-bound-soliton solutions of the nonlinear Schr\u00f6dinger equation (NLS) in the context of hydrodynamic surface gravity waves. Higher-order N-soliton solutions with N=2, 3 are studied in detail and shown to be associated with self-focusing in the wave group...", 
     "authors": "A. Chabchoub, N. Hoffmann, M. Onorato, G. Genty, J. M. Dudley, and N. Akhmediev", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.054104", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 12, 
@@ -125,9 +125,9 @@
     "title": "Transition from Wave Turbulence to Dynamical Crumpling in Vibrated Elastic Plates", 
     "abstract": "We study the dynamical regime of wave turbulence of a vibrated thin elastic plate based on experimental and numerical observations. We focus our study on the strongly nonlinear regime described in a previous Letter by Yokoyama and Takaoka. At small forcing, a weakly nonlinear regime is compatible wi...", 
     "authors": "Benjamin Miquel, Alexandros Alexakis, Christophe Josserand, and Nicolas Mordant", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.054302", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 13, 
@@ -135,9 +135,9 @@
     "title": "Analytical Results for Front Pinning between an Hexagonal Pattern and a Uniform State in Pattern-Formation Systems", 
     "abstract": "In pattern-forming systems, localized patterns are states of intermediate complexity between fully extended ordered patterns and completely irregular patterns. They are formed by stationary fronts enclosing an ordered pattern inside an homogeneous background. In two dimensions, the ordered pattern i...", 
     "authors": "G. Kozyreff and S. J. Chapman", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.054501", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 14, 
@@ -145,9 +145,9 @@
     "title": "Stochasticity Effects in Quantum Radiation Reaction", 
     "abstract": "When an ultrarelativistic electron beam collides with a sufficiently intense laser pulse, radiation-reaction effects can strongly alter the beam dynamics. In the realm of classical electrodynamics, radiation reaction has a beneficial effect on the electron beam as it tends to reduce its energy sprea...", 
     "authors": "N. Neitz and A. Di Piazza", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.054802", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 15, 
@@ -155,9 +155,9 @@
     "title": "Light-Induced Crystallization of Cold Atoms in a 1D Optical Trap", 
     "abstract": "Collective off-resonant scattering of coherent light by a cold gas induces long-range interactions via interference of light scattered by different particles. In a 1D configuration, these interactions grow particularly strong by coupling the particles via an optical nanofiber. Above a threshold pump...", 
     "authors": "Tobias Grie\u00dfer and Helmut Ritsch", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.055702", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 16, 
@@ -165,9 +165,9 @@
     "title": "Strain-Induced Defect Superstructure on the SrTiO_{3}(110) Surface", 
     "abstract": "We report on a combined scanning tunneling microscopy and density functional theory calculation study of the SrTiO3(110)-(4\u00d71) surface. It is found that antiphase domains are formed along the [11\u0305        0]-oriented stripes on the surface. The domain boundaries are decorated by defect pairs consisti...", 
     "authors": "Zhiming Wang, Fengmiao Li, Sheng Meng, Jiandi Zhang, E. W. Plummer, Ulrike Diebold, and Jiandong Guo", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.056101", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 17, 
@@ -175,9 +175,9 @@
     "title": "Time-Reversal-Invariant Topological Superconductivity and Majorana Kramers Pairs", 
     "abstract": "We propose a feasible route to engineer one- and two-dimensional time-reversal-invariant topological superconductors (SCs) via proximity effects between nodeless s\u00b1 wave iron-based SCs and semiconductors with large Rashba spin-orbit interactions. At the boundary of a time-reversal-invariant topologi...", 
     "authors": "Fan Zhang, C. L. Kane, and E. J. Mele", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.056402", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 18, 
@@ -185,9 +185,9 @@
     "title": "Topological Mirror Superconductivity", 
     "abstract": "We demonstrate the existence of topological superconductors (SCs) protected by mirror and time-reversal symmetries. D-dimensional (D=1, 2, 3) crystalline SCs are characterized by 2<", 
     "authors": "Fan Zhang, C. L. Kane, and E. J. Mele", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.056403", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 19, 
@@ -195,9 +195,9 @@
     "title": "Role of Oxygen Holes in Li_{x}CoO_{2} Revealed by Soft X-Ray Spectroscopy", 
     "abstract": "The fundamental electronic structure of the widely used battery material LixCoO2 still remains a mystery. Soft x-ray absorption spectroscopy of LixCoO2 reveals that holes with strong O 2p character play an essential role in the electronic conductivity of the Co<", 
     "authors": "T. Mizokawa, Y. Wakisaka, T. Sudayama, C. Iwai, K. Miyoshi, J. Takeuchi, H. Wadati, D. G. Hawthorn, T. Z. Regier, and G. A. Sawatzky", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.056404", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 20, 
@@ -205,9 +205,9 @@
     "title": "Pauli-Limited Multiband Superconductivity in KFe_{2}As_{2}", 
     "abstract": "The upper critical field Hc2(T) of the multiband superconductor KFe2As2 has been studied via low-temperature thermal expansion and magnetostriction measurements. We present compelling evidence for Pauli-limiting effects dominating Hc2(T) for H\u2225a, as revealed by a crossover from second- to first-orde...", 
     "authors": "D. A. Zocco, K. Grube, F. Eilers, T. Wolf, and H. v. L\u00f6hneysen", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.057007", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 21, 
@@ -215,9 +215,9 @@
     "title": "Ferromagnetic Exchange Anisotropy from Antiferromagnetic Superexchange in the Mixed 3d-5d Transition-Metal Compound Sr_{3}CuIrO_{6}", 
     "abstract": "We report a combined experimental and theoretical study of the unusual ferromagnetism in the one-dimensional copper-iridium oxide Sr3CuIrO6. Utilizing Ir L3 edge resonant inelastic x-ray scattering, we reveal a large gap magnetic excitation spectrum. We find that it is caused by an unusual exchange ...", 
     "authors": "Wei-Guo Yin, X. Liu, A. M. Tsvelik, M. P. M. Dean, M. H. Upton, Jungho Kim, D. Casa, A. Said, T. Gog, T. F. Qi, G. Cao, and J. P. Hill", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.057202", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 22, 
@@ -225,9 +225,9 @@
     "title": "Families of Quasilocal Conservation Laws and Quantum Spin Transport", 
     "abstract": "For fundamental integrable quantum chains with deformed symmetries we outline a general procedure for defining a continuous family of quasilocal operators whose time derivative is supported near the two boundary sites only. The program is implemented for a spin 1/2 XXZ chain, resulting in improved r...", 
     "authors": "Toma\u017e Prosen and Enej Ilievski", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.057203", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 23, 
@@ -235,9 +235,9 @@
     "title": "Direct Observation of Thermal Relaxation in Artificial Spin Ice", 
     "abstract": "We study the thermal relaxation of artificial spin ice with photoemission electron microscopy, and are able to directly observe how such a system finds its way from an energetically excited state to the ground state. On plotting vertex-type populations as a function of time, we can characterize the ...", 
     "authors": "A. Farhan, P. M. Derlet, A. Kleibert, A. Balan, R. V. Chopdekar, M. Wyss, J. Perron, A. Scholl, F. Nolting, and L. J. Heyderman", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.057204", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 24, 
@@ -245,9 +245,9 @@
     "title": "Midair Collisions Enhance Saltation", 
     "abstract": "Here we address the old question in aeolian particle transport about the role of midair collisions. We find that, surprisingly, these collisions do enhance the overall flux substantially. The effect depends strongly on restitution coefficient and wind speed. We can explain this observation as a cons...", 
     "authors": "M. V. Carneiro, N. A. M. Ara\u00fajo, T. P\u00e4htz, and H. J. Herrmann", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.058001", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 25, 
@@ -255,9 +255,9 @@
     "title": "Eddy Viscosity in Dense Granular Flows", 
     "abstract": "We present a seminal set of experiments on dense granular flows in the stadium shear geometry. The advantage of this geometry is that it produces steady shear flow over large deformations, in which the shear stress is constant. The striking result is that the velocity profiles exhibit an S shape, an...", 
     "authors": "T. Miller, P. Rognon, B. Metzger, and I. Einav", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.058002", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 26, 
@@ -265,9 +265,9 @@
     "title": "Transcriptional Delay Stabilizes Bistable Gene Networks", 
     "abstract": "Transcriptional delay can significantly impact the dynamics of gene networks. Here we examine how such delay affects bistable systems. We investigate several stochastic models of bistable gene networks and find that increasing delay dramatically increases the mean residence times near stable states....", 
     "authors": "Chinmaya Gupta, Jos\u00e9 Manuel L\u00f3pez, William Ott, Kre\u0161imir Josi\u0107, and Matthew R. Bennett", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.058104", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 27, 
@@ -275,9 +275,9 @@
     "title": "Capillary Force on a Micrometric Sphere Trapped at a Fluid Interface Exhibiting Arbitrary Curvature Gradients", 
     "abstract": "We report theoretical predictions and measurements of the capillary force acting on a spherical colloid smaller than the capillary length that is placed on a curved fluid interface of arbitrary shape. By coupling direct imaging and interferometry, we are able to measure the in\u00a0situ colloid contact a...", 
     "authors": "Christophe Blanc, Denys Fedorenko, Michel Gross, Martin In, Manouk Abkarian, Mohamed Amine Gharbi, Jean-Baptiste Fournier, Paolo Galatola, and Maurizio Nobili", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.058302", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 28, 
@@ -285,9 +285,9 @@
     "title": "Carnot Cycle at Finite Power: Attainability of Maximal Efficiency", 
     "abstract": "We want to understand whether and to what extent the maximal (Carnot) efficiency for heat engines can be reached at a finite power. To this end we generalize the Carnot cycle so that it is not restricted to slow processes. We show that for realistic (i.e., not purposefully designed) engine-bath inte...", 
     "authors": "Armen E. Allahverdyan, Karen V. Hovhannisyan, Alexey V. Melkikh, and Sasun G. Gevorkian", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.050601", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }, 
   {
     "index": 29, 
@@ -295,8 +295,8 @@
     "title": "Kolmogorov-Zakharov Spectrum in AdS Gravitational Collapse", 
     "abstract": "We study black hole formation during the gravitational collapse of a massless scalar field in asymptotically D-dimensional anti\u2013de Sitter AdSD spacetimes for D=4, 5. We conclude that spherically symmetric gravitational collapse in asymptotically AdS spaces is turbulent and characterized by a Kolmogo...", 
     "authors": "H. P. de Oliveira, Leopoldo A. Pando Zayas, and E. L. Rodrigues", 
-    "epoch": 1375614408, 
+    "epoch": 1375691354, 
     "link": "http://link.aps.org/doi/10.1103/PhysRevLett.111.051101", 
-    "published": "Sunday 04 August"
+    "published": "Monday 05 August"
   }
 ]

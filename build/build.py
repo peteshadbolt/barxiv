@@ -6,6 +6,7 @@ import arxiv
 import nature
 import science
 import prl
+from ftplib import FTP
 
 cutoff=100
 
@@ -58,6 +59,19 @@ def do_prl():
     f=open('../prl.json', 'w')
     f.write(''); f.write(s); f.close()
 
+def upload():
+    print 'uploading...'
+    ftp = FTP('peteshadbolt.co.uk')
+    ftp.login('peteshad', raw_input('password > '))
+    print 'logged in to FTP ok'
+    ftp.cwd('public_html/barxiv')
+    for file in ['nature', 'science', 'prl', 'quant-ph', 'nphoton', 'nphys', 'ncomms']:
+        file+='.json'
+        print file
+        ftp.storlines('STOR '+file, open('../'+file))
+    ftp.quit()
+    print 'done'
+
 #do_science()
 do_arxiv()
 #do_prl()
@@ -65,4 +79,4 @@ do_arxiv()
 #do_nature('http://www.nature.com/nphoton/journal/vaop/ncurrent/rss.rdf', 'nphoton')
 #do_nature('http://www.nature.com/nphys/journal/vaop/ncurrent/rss.rdf', 'nphys')
 #do_nature('http://www.nature.com/ncomms/rss/all_index.rdf', 'ncomms')
-
+upload()
