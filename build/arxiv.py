@@ -4,12 +4,12 @@ from time import mktime
 import feedparser
 from optimize import optimize_search
 
+max_results=100
+
 def strip_authors(html): return re.sub('<[^>]*>', '', html)
 def strip_tags(html): return re.sub('<[^>]*>', '', html)
 def strip_title(title): return title.split('(')[0]
-
 def epoch(dt): return int(mktime(dt.timetuple()))
-
 
 def parse_api((index, entry)):
     ''' parse a post from the arxiv '''
@@ -45,26 +45,26 @@ def parse_rss((index, entry)):
     out['epoch']=epoch(t1)
     return out
 
-def get_api(max_results=100):
+def get_api():
     ''' get the latest n posts from the arxiv as a list of dicts '''
     api='http://export.arxiv.org/api/query?search_query=cat:quant-ph&start=0&max_results=%d&sortBy=submittedDate&sortOrder=descending' % max_results
     feed = feedparser.parse(api)
     return list(map(parse_api, enumerate(feed.entries)))
 
-def get_rss(max_results=100):
+def get_rss():
     ''' get the latest n posts from the arxiv as a list of dicts '''
     rss='http://arxiv.org/rss/quant-ph'
     feed = feedparser.parse(rss)
     return list(map(parse_rss, enumerate(feed.entries)))
 
-def get_all(max_results=100):
+def get_all(category=None):
     ''' get all posts from the arxiv '''
-    api_posts=get_api(max_results)
-    rss_posts=list(reversed(get_rss(max_results)))
+    api_posts=get_api()
+    rss_posts=list(reversed(get_rss()))
     posts=rss_posts+api_posts
     posts=filter(lambda x: x!=None, posts)
 
-    # remove dupes
+    # remove dupicates
     unique_posts=[]
     used_ids=[]
     for post in posts:
@@ -73,7 +73,6 @@ def get_all(max_results=100):
             unique_posts.append(post)
             used_ids.append(ft)
 
-    #print '\n'.join(map(lambda x:x.encode('ascii', 'ignore'), used_ids))
     return unique_posts
 
 if __name__=='__main__':

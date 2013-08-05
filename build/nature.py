@@ -7,7 +7,6 @@ from optimize import optimize_search
 def strip_authors(html): return re.sub('<[^>]*>', '', html)
 def strip_tags(html): return re.sub('<[^>]*>', '', html)
 def strip_title(title): return title.split('(')[0]
-
 def epoch(dt): return int(mktime(dt.timetuple()))
 
 def get_authors(entry):
@@ -40,9 +39,13 @@ def parse_rss((index, entry)):
     out['epoch']=epoch(t1)
     return out
 
-def get_rss(url):
+def get_all(category=None):
     ''' get the latest n posts from nature as a list of dicts '''
-    feed = feedparser.parse(url)
+    url_dict={'nature':'http://www.nature.com/nature/journal/vaop/ncurrent/rss.rdf',
+                'nphoton':'http://www.nature.com/nphoton/journal/vaop/ncurrent/rss.rdf',
+                'nphys':'http://www.nature.com/nphys/journal/vaop/ncurrent/rss.rdf',
+                'ncomms':'http://www.nature.com/ncomms/rss/all_index.rdf'}
+    feed = feedparser.parse(url_dict[category])
     return list(map(parse_rss, enumerate(feed.entries)))
 
 if __name__=='__main__':

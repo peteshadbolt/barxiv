@@ -8,6 +8,7 @@ var lastInputValue='';
 var feedData='';
 var intervalID='none';
 var startFeed='quant-ph';
+var sortMode='closest';
 
 // Run on startup
 $(document).ready(main);
@@ -88,7 +89,7 @@ function getMatches(search, tags)
 function updateBookmarkLink(tags)
 {
     var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags.join('_');
-    if (!$('#sortBox').is(':checked')){link+='\&nosort=1';}
+    if (sortMode=='newest'){link+='\&nosort=1';}
     if (startFeed!='quant-ph'){link+='\&source='+startFeed;}
     $('#bookMarkLink').attr('href', link)
 }
@@ -130,7 +131,7 @@ function update(force)
     }
 
     // Sort by number of matches
-    if ($('#sortBox').is(':checked') && max>0) { table.sort(function(a,b){ return b['score']-a['score']; }); }
+    if (sortMode=='closest' && max>0) { table.sort(function(a,b){ return b['score']-a['score']; }); }
 
     // Rebuild the table
     $('#container').empty();  
@@ -182,7 +183,6 @@ function loadFeed(filename)
 function main() 
 {
     // Bind update to form changes
-    $('#sortBox').change(function(){update(true);});
     $('.changesource').click(function()
     {
         $('.changesource').css('border', 'none');
@@ -191,9 +191,16 @@ function main()
         $(this).css('border', '1px solid red');
     });
 
+    $('.sort-choice').click(function()
+    {
+        $('.sort-choice').css('border', 'none');
+        sortMode=$(this).text();
+        $(this).css('border', '1px solid #55dd33');
+        update(true);
+    });
 
     // Set up the input box from the query string and focus
-    $('#sortBox').prop('checked', !(getQuery('nosort')=='1'));
+    if (getQuery('nosort')=='1'){sortMode='newest';}
     setInputBox(getQuery('tags'));
     $('#inputbox').focus(); 
     userStartFeed=getQuery('source');
@@ -201,5 +208,6 @@ function main()
 
     // Load the json and fill the screen
     $('#change-'+startFeed).css('border', '1px solid red');
+    $('#sort-'+sortMode).css('border', '1px solid #55dd33');
     loadFeed(startFeed+'.json');
 }

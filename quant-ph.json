@@ -5,7 +5,7 @@
     "title": "<img src=\"today.png\"/>Extraordinary momentum and spin in evanescent waves. ", 
     "abstract": "Momentum and spin represent fundamental dynamical properties of quantum\nparticles. It is known that the photon's momentum is determined by the wave\nvector and is independent of polarization. The spin of the photon is associated\nwith circular polarization and is also collinear with the wave vector. We show\nthat exactly the opposite can be the case for evanescent optical waves. First,\na single evanescent wave possesses a spin angular momentum, which is largely\nindependent of the polarization and is orthogonal to the wave vector. Second,\nsuch a wave carries a momentum component, which depends on the circular\npolarization and is also orthogonal to the wave vector. Although these\nextraordinary properties seem to be in contradiction with what is known about\nphotons, we show that they reveal a fundamental spin momentum, introduced by\nBelinfante in field theory more than 70 years ago, which is unobservable in\npropagating fields. We demonstrate, both theoretically and numerically, that\nthe unusual transverse momentum and spin push and twist an absorbing Mie\nparticle in an evanescent field. Thus, evanescent waves offer a unique\npossibility to observe 'impossible' properties of light and a fundamental\nfield-theory quantity, which was previously considered as 'virtual'.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0547", 
     "authors": "Konstantin Y. Bliokh, Aleksandr Y. Bekshaev, Franco Nori", 
     "id": "http://arxiv.org/abs/1308.0547"
@@ -16,7 +16,7 @@
     "title": "<img src=\"today.png\"/>Inequalities for the Ranks of Quantum States. ", 
     "abstract": "We investigate relations between the ranks of marginals of multipartite\nquantum states. These are the Schmidt ranks across all possible bipartitions\nand constitute a natural quantification of multipartite entanglement\ndimensionality. We show that there exist inequalities constraining the possible\ndistribution of ranks. This is analogous to the case of von Neumann entropy\n(\\alpha-R\\'enyi entropy for \\alpha=1), where nontrivial inequalities\nconstraining the distribution of entropies (such as e.g. strong subadditivity)\nare known. It was also recently discovered that all other \\alpha-R\\'enyi\nentropies for $\\alpha\\in(0,1)\\cup(1,\\infty)$ satisfy only one trivial linear\ninequality (non-negativity) and the distribution of entropies for\n$\\alpha\\in(0,1)$ is completely unconstrained beyond non-negativity. Our result\nresolves an important open question by showing that also the case of \\alpha=0\n(logarithm of the rank) is restricted by nontrivial linear relations and thus\nthe cases of von Neumann entropy (i.e., \\alpha=1) and 0-R\\'enyi entropy are\nexceptionally interesting measures of entanglement in the multipartite setting.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0539", 
     "authors": "Josh Cadney, Marcus Huber, Noah Linden, Andreas Winter", 
     "id": "http://arxiv.org/abs/1308.0539"
@@ -27,7 +27,7 @@
     "title": "<img src=\"today.png\"/>Constrained dynamics via the Zeno effect in quantum simulation: Implementing non-Abelian lattice gauge theories with cold atoms. ", 
     "abstract": "We show how engineered classical noise can be used to generate constrained\nHamiltonian dynamics in atomic quantum simulators of many-body systems, taking\nadvantage of the continuous Zeno effect. After discussing the general\ntheoretical framework, we focus on applications in the context of lattice gauge\ntheories, where imposing exotic, quasi-local constraints is usually\nchallenging. We demonstrate the effectiveness of the scheme for both Abelian\nand non-Abelian gauge theories, and discuss how engineering dissipative\nconstraints substitutes complicated, non-local interaction patterns by global\ncoupling to laser fields.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0528", 
     "authors": "K. Stannigel, P. Hauke, D. Marcos, M. Hafezi, S. Diehl, M. Dalmonte, P. Zoller", 
     "id": "http://arxiv.org/abs/1308.0528"
@@ -38,7 +38,7 @@
     "title": "<img src=\"today.png\"/>Spontaneous emission and collection efficiency enhancement of single emitters in diamond via plasmonic cavities and gratings. ", 
     "abstract": "We demonstrate an approach, based on plasmonic apertures and gratings, to\nenhance the radiative decay rate of single NV centers in diamond, while\nsimultaneously improving their collection efficiency. Our structures are based\non metallic resonators formed by surrounding sub-wavelength diamond nanoposts\nwith a silver film, which can enhance the spontaneous emission rate of an\nembedded NV center. However, the collection efficiency of emitted photons\nremains low due to losses to surface plasmons and reflections at the\ndiamond-air interface. In this work, we mitigate photon losses into these\nchannels by incorporating grating structures into the plasmonic cavity system.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0522", 
     "authors": "Jennifer T. Choy, Irfan Bulu, Birgit J. M. Hausmann, Erika Janitz, I-Chun Huang, Marko Lon&#x10d;ar", 
     "id": "http://arxiv.org/abs/1308.0522"
@@ -49,7 +49,7 @@
     "title": "<img src=\"today.png\"/>Autler-Townes splitting in a three-dimensional transmon superconducting qubit. ", 
     "abstract": "We have observed the Autler-Townes doublet in a superconducting Al/AlOx/Al\ntransmon qubit that acts as an artificial atom embedded in a three-dimensional\nCu microwave cavity at a temperature of 22 mK. Using pulsed microwave\nspectroscopy, the three lowest transmon levels are isolated, eliminating\nunwanted effects of higher qubit modes and cavity modes. The long coherence\ntime (~40 us) of the transmon enables us to observe a clear Autler-Townes\nsplitting at drive amplitudes much smaller than the transmon level\nanharmonicity (177 MHz). Three-level density matrix simulations with no free\nparameters provide excellent fits to the data. At maximum separation, the\nfidelity of a dark state achieved in this experiment is estimated to be\n99.6-99.9%.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0520", 
     "authors": "S. Novikov, J. E. Robinson, Z. K. Keane, B. Suri, F. C. Wellstood, B. S. Palmer", 
     "id": "http://arxiv.org/abs/1308.0520"
@@ -60,7 +60,7 @@
     "title": "<img src=\"today.png\"/>217 km long distance photon-counting optical time-domain reflectometry based on ultra-low noise up-conversion single photon detector. ", 
     "abstract": "We demonstrate a photon-counting optical time-domain reflectometry with 42.19\ndB dynamic range using an ultra-low noise up-conversion single photon detector.\nBy employing the long wave pump technique and a volume Bragg grating, we reduce\nthe noise of our up-conversion single photon detector, and achieve a noise\nequivalent power of -139.7 dBm/sqrt(Hz). We perform the OTDR experiments using\na fiber of length 216.95 km, and show that our system can identify defects\nalong the entire fiber length with a distance resolution better than 10 cm in a\nmeasurement time of 13 minutes.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0512", 
     "authors": "Guo-Liang Shentu, Qi-Chao Sun, Xiao Jiang, Xiao-Dong Wang, Jason S. Pelc, M. M. Fejer, Qiang Zhang, Jian-Wei Pan", 
     "id": "http://arxiv.org/abs/1308.0512"
@@ -71,7 +71,7 @@
     "title": "<img src=\"today.png\"/>Localization of relativistic particles and uncertainty relations. ", 
     "abstract": "Localization of relativistic particles is still a controversial topic. We\nconstruct a positive operator-valued measure for position that is based on the\nenergy density and give explicit expressions for the resulting probability\ndistributions for scalar particles and photons. The probability density of\nphotons's position equals to the modulus squared of the Newton-Wigner-like wave\nfunction, even if the Newton-Wigner position operator does not exist. We show\nthat the effective 3x3 polarization density matrices are expressed in terms of\nthis wave function, and derive a sharp uncertainty relation Delta x Delta\np_x&gt;hbar/2+...\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0479", 
     "authors": "Daniel R. Terno", 
     "id": "http://arxiv.org/abs/1308.0479"
@@ -82,7 +82,7 @@
     "title": "<img src=\"today.png\"/>Nonlocality in sequential correlation scenarios. ", 
     "abstract": "As first shown by Popescu [S. Popescu, Phys. Rev. Lett. 74, 2619 (1995)],\nsome quantum states only reveal their nonlocality when subjected to a sequence\nof measurements while giving rise to local correlations in standard Bell tests.\nMotivated by this manifestation of \"hidden nonlocality\" we set out to develop a\ngeneral framework for the study of nonlocality when sequences of measurements\nare performed. Similar to [R. Gallego et al., Phys. Rev. Lett. 109, 070401\n(2013)] our approach is operational, i.e. the task is to identify the set of\nallowed operations in sequential correlation scenarios and define nonlocality\nas the resource that cannot be created by these operations. This leads to a\ncharacterisation of sequential nonlocality that contains as particular cases\nstandard nonlocality and hidden nonlocality.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0477", 
     "authors": "Rodrigo Gallego, Lars Erik W&#xfc;rflinger, Rafael Chaves, Antonio Ac&#xed;n, Miguel Navascu&#xe9;s", 
     "id": "http://arxiv.org/abs/1308.0477"
@@ -93,7 +93,7 @@
     "title": "<img src=\"today.png\"/>Quantum correlations in random access codes with restricted shared randomness. ", 
     "abstract": "We show that separable states are a useful resource in correlation-assisted\nrandom access codes where correlated classical bits are replaced with\ncorrelated qubits. The protocols with two assisting (qu)bits are studied in\ndetail revealing the role of quantum discord in producing the quantum advantage\nover the classical protocols. It turns out that the best performing quantum\nprotocols require highly entangled states, but nevertheless there exist\nseparable states that outperform some entangled ones as well as the best\nclassical protocols.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0476", 
     "authors": "T. K. Chuan, T. Paterek", 
     "id": "http://arxiv.org/abs/1308.0476"
@@ -104,7 +104,7 @@
     "title": "<img src=\"today.png\"/>Entanglement generation in quantum networks of Bose-Einstein condensates. ", 
     "abstract": "Two component (spinor) Bose-Einstein condensates (BECs) are considered as the\nnodes of an interconnected quantum network. Unlike standard single-system\nqubits, in a BEC the quantum information is duplicated in a large number of\nidentical bosonic particles, thus can be considered to be a \"macroscopic\"\nqubit. One of the difficulties with such a system is how to effectively\ninteract such qubits together in order to transfer quantum information and\ncreate entanglement. Here we propose a scheme of cavities containing spinor\nBECs coupled by optical fiber in order to achieve this task. We discuss\nentanglement generation and quantum state transfer between nodes using such\nmacroscopic BEC qubits.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0453", 
     "authors": "Alexey N. Pyrkov, Tim Byrnes", 
     "id": "http://arxiv.org/abs/1308.0453"
@@ -115,7 +115,7 @@
     "title": "<img src=\"today.png\"/>Spin Relaxation due to Charge Noise. ", 
     "abstract": "We study decoherence of an electron spin qubit in a quantum dot due to charge\nnoise. We find that at the lowest order, the pure dephasing channel is\nsuppressed for both 1/f charge noise and Johnson noise. The relaxation rate\ndepends linearly on the applied magnetic field for typical 1/f noise, and is\ninversely proportional to the fourth power of the dot confinement energy.\nBecause of the weaker field-dependence, the spin relaxation rate due to charge\nnoise could dominate over phonon noise as the magnetic field decreases. Our\ncalculated spin relaxation times are in the order of seconds in GaAs and 10,000\nseconds in Si.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0352", 
     "authors": "Peihao Huang, Xuedong Hu", 
     "id": "http://arxiv.org/abs/1308.0352"
@@ -126,7 +126,7 @@
     "title": "<img src=\"today.png\"/>Topological Flat Band Models and Fractional Chern Insulators. ", 
     "abstract": "Topological insulators are accompanied by exotic edge states that are\nprotected by a bulk single-particle band gap once the filled bands are\ncharacterized by non-trivial topological invariants. Interactions can have\nprofound effects and lead to entirely new insulating phases, with an altogether\nmuch richer and less explored phenomenology, as is particularly clear in the\ncase of partial filling of weakly dispersive bands. Most saliently, lattice\ngeneralizations of fractional quantum Hall states, dubbed fractional Chern\ninsulators, have recently been predicted to be stabilized by interactions\nwithin nearly dispersionless bands with non-zero Chern number, $C$. Contrary to\ntheir continuum analogues, these states do not require an external magnetic\nfield and may potentially persist at high temperatures, which make these\nsystems very interesting in the context of applications such as topological\nquantum computation. This review recapitulates the basics of tight-binding\nmodels hosting nearly flat bands with non-trivial topology, $C\\neq 0$, and\nsummarizes the present understanding of interactions and strongly correlated\nphases within these bands. Emphasis is put on the analogy with continuum Landau\nlevel physics, as well as qualitatively new, lattice specific, aspects\nincluding Berry curvature fluctuations, competing instabilities as well as\nnovel collective states of matter emerging in bands with $|C|&gt;1$. Possible\nexperimental realizations, including oxide interfaces and cold atom\nimplementations as well as generalizations to flat bands characterized by other\ntopological invariants are also discussed.\n", 
     "published": "New", 
-    "epoch": 1375692147, 
+    "epoch": 1375736975, 
     "link": "http://arxiv.org/pdf/1308.0343", 
     "authors": "Emil J. Bergholtz, Zhao Liu", 
     "id": "http://arxiv.org/abs/1308.0343"

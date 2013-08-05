@@ -30,7 +30,7 @@ def parse_rss((index, entry)):
     out['epoch']=epoch(t1)
     return out
 
-def get_all():
+def get_all(category='none'):
     ''' get the latest n posts from nature as a list of dicts '''
     url = 'http://feeds.aps.org/rss/recent/prl.xml'
     feed = feedparser.parse(url)

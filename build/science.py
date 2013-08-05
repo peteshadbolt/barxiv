@@ -30,7 +30,6 @@ def parse_rss((index, entry)):
 
     out={}
     out['title']=strip_title(entry['title'])
-    print out['title']
     out['abstract'], out['authors']=split_authors(entry['summary'])
     out['search']=optimize_search(out['title']+out['abstract']+out['authors'])
     out['link']=entry['link']
@@ -47,10 +46,11 @@ def get_rss(url):
     feed = feedparser.parse(url)
     return list(map(parse_rss, enumerate(feed.entries)))
 
-def get_all():
+def get_all(category=None):
+    ''' get both the current and express feeds '''
     normal=get_rss('http://www.sciencemag.org/rss/current.xml')
     express=get_rss('http://www.sciencemag.org/rss/express.xml')
-    return normal+express
+    return express+normal
 
 if __name__=='__main__':
     stuff=get_all()
