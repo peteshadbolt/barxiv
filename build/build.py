@@ -33,7 +33,7 @@ def upload():
     print 'logged in to FTP ok'
     ftp.cwd('public_html/barxiv')
 
-    for file in ['nature', 'science', 'prl', 'quant-ph', 'nphoton', 'nphys', 'ncomms']:
+    for file in ['nature', 'science', 'quant-ph', 'nphoton', 'nphys', 'ncomms']:
         file+='.json'
         print file
         ftp.storlines('STOR '+file, open('../'+file))

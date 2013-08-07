@@ -55,7 +55,6 @@ function getPost(entry, matches, color)
 
     // The abstract
     post+='<div class="abstract" style="display: none;">'+entry.abstract+'</div>';
-
     post+='</div>';
     return post;
 }
@@ -88,10 +87,13 @@ function getMatches(search, tags)
 // Update the bookmark link
 function updateBookmarkLink(tags)
 {
-    var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags.join('_');
+    var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags;
     if (sortMode=='newest'){link+='\&nosort=1';}
     if (startFeed!='quant-ph'){link+='\&source='+startFeed;}
     $('#bookMarkLink').attr('href', link)
+    localStorage.sortMode=sortMode;
+    localStorage.startFeed=startFeed;
+    localStorage.tags=tags.join('_')
 }
 
 
@@ -200,8 +202,12 @@ function main()
     });
 
     // Set up the input box from the query string and focus
+    if (localStorage.sortMode!=undefined){sortMode=localStorage.sortMode;}
+    if (localStorage.startFeed!=undefined){startFeed=localStorage.startFeed;}
     if (getQuery('nosort')=='1'){sortMode='newest';}
-    setInputBox(getQuery('tags'));
+    userTags=getQuery('tags')
+    if (userTags=='' && localStorage.tags!=undefined){userTags=localStorage.tags;}
+    setInputBox(userTags);
     $('#inputbox').focus(); 
     userStartFeed=getQuery('source');
     if (userStartFeed!=''){startFeed=userStartFeed;}

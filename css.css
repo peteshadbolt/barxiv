@@ -4,7 +4,7 @@ body{font-family:'arial', sans-serif; font-size:10pt; margin:0em; }
 
 /*posts*/
 div.post { padding: 0.4em; margin: 0.6em; border-radius: 0.3em; }
-div.post a { font-size: 1em; font-weight: bold; color:black; text-decoration:none;  }
+div.post a { font-size: 1.1em; font-weight: bold; color:black; text-decoration:none;  }
 div.post a:hover { text-decoration:underline;}
 
 /*post components*/
@@ -12,7 +12,7 @@ div.match { margin-left: 0.45em; font-size: 0.8em; font-family: monospace; displ
 div.authors { display:inline; font-size: 0.9em; }
 div.date { display:inline; float:right; font-size: 0.9em; font-style:italic; color:#555555;}
 div.newPost { display:inline; float:right; font-size:0.9em; font-weight:bold; color:#000000;}
-div.abstract { font-size: 1em; margin: 0.6em; padding: 0.45em; text-align: justify; font-family: serif; background-color: white; border-radius:0.3em;}
+div.abstract { font-size: 1.1em; margin: 0.6em; padding: 0.45em; text-align: justify; font-family: serif; background-color: white; border-radius:0.3em;}
 
 /*page sections*/
 
@@ -30,7 +30,7 @@ div.abstract { font-size: 1em; margin: 0.6em; padding: 0.45em; text-align: justi
 #bookMarkLink {color:#000088; }
 #settingsHolder{padding-top: 0.6em; padding-bottom:0.25em;}
 .changesource {cursor: pointer; margin: 0.1em 0.1em; font-size: 0.9em; background-color: #ffbbbb; padding: 0.2em 0.45em; border-radius: 0.3em; color: black; display:inline-block;}
-.sort-choice {cursor: pointer; margin: 0.1em 0.1em; font-size: 0.9em; background-color: #ccffbb; padding: 0.2em 0.45em; border-radius: 0.3em; color: black; display:inline-block;}
+.sort-choice {cursor: pointer; margin: 0.1em 0.1em; font-size: 0.9em; background-color: #CEF2C7; padding: 0.2em 0.45em; border-radius: 0.3em; color: black; display:inline-block;}
 
 /*footer*/
 #footer { font-size: .9em; color: #ff5500; padding: 0.6em; margin: 0.6em; text-align:center;}
