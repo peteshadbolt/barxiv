@@ -1,9 +1,8 @@
-import re
+import sched, time
 import json
 import arxiv
 import nature
 import science
-import prl
 from ftplib import FTP
 
 cutoff=100
@@ -29,19 +28,20 @@ def upload():
     ''' upload all the jsons '''
     print 'uploading...'
     ftp = FTP('peteshadbolt.co.uk')
-    ftp.login('peteshad', raw_input('password > '))
+    ftp.login('peteshad', 'ah_1one')
     print 'logged in to FTP ok'
     ftp.cwd('public_html/barxiv')
 
     for file in ['nature', 'science', 'quant-ph', 'nphoton', 'nphys', 'ncomms']:
-        file+='.json'
+        file='../%s.json' % file
         print file
-        ftp.storlines('STOR '+file, open('../'+file))
+        ftp.storlines('STOR '+file, open(file))
     ftp.quit()
     print 'done'
 
 def do_everything():
     ''' just flipping well do everything '''
+    #try: 
     generate_json(arxiv, 'quant-ph')
     generate_json(science, 'science')
     generate_json(nature, 'nature')
@@ -50,5 +50,14 @@ def do_everything():
     generate_json(nature, 'ncomms')
     #generate_json(prl, 'prl')
     upload()
+    #except:
+        #print 'error!'
 
-do_everything()
+
+minutes=30
+
+while True:
+    do_everything()
+    for i in range(60*minutes):
+        time.sleep(1)
+
