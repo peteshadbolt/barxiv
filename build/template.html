@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<!--prevent font boosting-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BARXIV</title>
+<!--get the css-->
+<link rel="stylesheet" type="text/css" href="css.css">
+<!--import jquery, gradients, and the main script-->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="rainbowvis.js"></script>
+<script src="main.js"></script>
+</head>
+
+
+<body>
+
+<div id='introduction'>
+<b><tt>BARXIV</tt> shows the latest 100 papers posted to the <a href='http://arxiv.org'>arXiv</a>. Prioritize your reading by author or keyword.</b>
+</div>
+
+<div id='input'>
+
+<div> 
+<b>Type some keywords and authors into the box below.</b>
+Then bookmark <a id='bookMarkLink' href='#'>this link</a> to save your settings. 
+<img id='spinner' src='spin.gif' style='display: none;'/>
+<span class='clear'></span>
+</div>
+
+<div id='inputHolder'> <input type='text' id='inputbox' placeholder='e.g. quantum photon optic chip experim diamond einstein bohr dirac '/> </div>
+
+<div id='settingsHolder'>
+
+<span id='change-quant-ph' class='changesource'>quant-ph</span>
+<span id='change-nature' class='changesource'>nature</span>  
+<span id='change-nphoton' class='changesource'>nphoton</span>  
+<span id='change-nphys' class='changesource'>nphys</span>  
+<span id='change-ncomms' class='changesource'>ncomms</span>  
+<span id='change-science' class='changesource'>science</span>  
+<!--<span id='change-prl' class='changesource'>prl</span>  -->
+
+<!--<span id='sort-date' class='changesource'>sort by date</span>  -->
+<span id='sort-closest' class='sort-choice'>closest</span>
+<span id='sort-newest' class='sort-choice'>newest</span>
+<!--<span id='checkBoxHolder'><input type='checkbox' checked='checked' id='sortBox'> Sort</span>-->
+<br class='clear' />
+</div>
+
+</div>
+
+<!--The main container where all our papers live-->
+<div id="container">
+<!--AAAAAAAAAAAAAAAAA-->
+</div>
+
+<br>
+
+<center>
+<img id='logo' src='logo.png'/>
+</center>
+
+<div id="footer">
+Made by <a href="http://www.peteshadbolt.co.uk">Pete Shadbolt</a> using the <a href='http://arxiv.org'>arXiv</a> API.
+</div>
+
+
+</body>
+
+</html>
