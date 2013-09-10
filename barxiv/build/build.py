@@ -77,13 +77,12 @@ def rewrite_html():
 
 def do_everything():
     ''' just flipping well do everything '''
-    #generate_json(arxiv, 'quant-ph')
-    #generate_json(science, 'science')
-    #generate_json(nature, 'nature')
-    #generate_json(nature, 'nphoton')
-    #generate_json(nature, 'nphys')
-    #generate_json(nature, 'ncomms')
-    #generate_json(prl, 'prl')
+    generate_json(arxiv, 'quant-ph')
+    generate_json(science, 'science')
+    generate_json(nature, 'nature')
+    generate_json(nature, 'nphoton')
+    generate_json(nature, 'nphys')
+    generate_json(nature, 'ncomms')
     rewrite_html()
     upload()
 
