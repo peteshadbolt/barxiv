@@ -170,6 +170,7 @@ function setInputBox(tags)
 // load a feed
 function loadFeed(filename)
 {
+    filename='cache/'+filename;
     if (intervalID!='none') {clearInterval(intervalID);}
     $('#spinner').show()
     $.getJSON(filename, function( json ) {
