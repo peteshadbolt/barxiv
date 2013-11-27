@@ -22,15 +22,17 @@ def trim_authors(post, chop=300):
 
 def scrape_site(source, name):
     ''' load posts, filter them, sort them, and dump to JSON '''
-    print 'caching %s...' % name
+    # this should write to a datastore
+    # we should use hashes to identify unique posts to the arxiv
     all_posts=source.get_all(name)
     all_posts=filter(lambda x: x!=None, all_posts)
     all_posts=sorted(all_posts, key=lambda x: x['epoch'], reverse=True)
     all_posts=map(trim_authors, all_posts)
     s=json.dumps(all_posts[:cutoff], indent=2)
-    f=open('cache/%s.json' % name, 'w')
-    f.write(s)
-    f.close()
+    logging.info(s)
+    #f=open('cache/%s.json' % name, 'w')
+    #f.write(s)
+    #f.close()
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
