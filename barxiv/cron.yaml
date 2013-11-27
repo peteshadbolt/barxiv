@@ -1,0 +1,4 @@
+cron:
+- description: Scrape all journals
+  url: /admin/scrape
+  schedule: every 2 hours
