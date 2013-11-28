@@ -18,8 +18,7 @@ class post:
         self.authors=strip_authors(entry['author'])
         self.search_terms=optimize_search(self.title+self.abstract+self.authors)
         self.pdf_url=entry['link'].replace('abs', 'pdf')
-        t1=datetime.today()
-        self.published_epoch=epoch(t1)
+        self.published=datetime.today()
 
     def __str__(self):
         ''' Convert to string '''

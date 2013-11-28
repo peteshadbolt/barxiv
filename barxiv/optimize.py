@@ -6,4 +6,6 @@ def optimize_search(s):
     s=s.replace('.', ' ')
     s=s.replace(',', ' ')
     s=map(lambda x: x.strip(), list(set(s.split(' '))))
-    return ' '.join(filter(lambda x: not x in frequentwords, s))
+    s= ''.join(filter(lambda x: not x in frequentwords, s))
+    if len(s)>450: s=s[:450]
+    return s

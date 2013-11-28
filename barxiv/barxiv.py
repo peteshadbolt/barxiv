@@ -7,16 +7,14 @@ import arxiv
 DEFAULT_DATABASE_NAME='BARXIV'
 def post_database_key(): return ndb.Key('Post', DEFAULT_DATABASE_NAME)
 
-class post(ndb.Model):
+class Post(ndb.Model):
     ''' Model a post in the database '''
-    token=ndb.StringProperty()
-    name=ndb.StringProperty()
-    email=ndb.StringProperty()
-    intent=ndb.StringProperty()
-    state=ndb.StringProperty()
-    duration=ndb.IntegerProperty()
-    date=ndb.DateTimeProperty(auto_now_add=True)
-    started=ndb.DateTimeProperty()
+    title=ndb.TextProperty()
+    abstract=ndb.TextProperty()
+    authors=ndb.TextProperty()
+    search_terms=ndb.StringProperty()
+    published=ndb.DateTimeProperty()
+    scraped=ndb.DateTimeProperty(auto_now_add=True)
 
 # Set up the templating engine
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -27,12 +25,23 @@ class ScrapePage(webapp2.RequestHandler):
     def get(self):
         ''' Time to scrape the journals '''
         logging.info('Starting scrape')
+
+        # Clear out the database
+        ndb.delete_multi(Post.query().fetch(keys_only=True))
+
+        # Put the new posts into the database
+        #TODO: check for duplicates here
         all_posts=arxiv.get_rss()
         for post in all_posts:
-            continue
-            token = accessToken(parent=access_token_database_key())
-            # build the token here
-            token.put()
+            db_entry = Post(parent=post_database_key(),  \
+                        id=post.arxiv_id,  \
+                        title=post.title,  \
+                        abstract=post.abstract,  \
+                        authors=post.authors,  \
+                        search_terms=post.search_terms,  \
+                        published=post.published)
+            db_entry.put()
+        logging.info('Scrape finished')
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
