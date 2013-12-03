@@ -7,6 +7,7 @@ div.post { padding: 0.4em; margin: 0.6em; border-radius: 0.3em;
 border: 1px solid #eeeeee}
 div.post a { font-size: 1.1em; font-weight: bold; color:black; text-decoration:none;  }
 div.post a:hover { text-decoration:underline;}
+/*div.post div {padding: .2em}*/
 
 /*div.post { padding: 0.4em; margin: 0.6em; border-radius: 0.3em; }*/
 /*div.post a { font-size: 1.1em; font-weight: bold; color:black; text-decoration:none;  }*/
@@ -16,7 +17,7 @@ div.post a:hover { text-decoration:underline;}
 div.match { margin-left: 0.45em; font-size: 0.8em; font-family: monospace; display:inline; float:right; background-color: #ffffff;}
 div.authors { display:inline; font-size: 0.9em; }
 div.date { display:inline; float:right; font-size: 0.9em; font-style:italic; color:#555555;}
-div.newPost { display:inline; float:right; font-size:0.9em; font-weight:bold; color:#000000;}
+div.newPost { display:inline; float:right; font-size:0.9em; color:#444444;}
 div.abstract { font-size: 1.1em; margin: 0.6em; padding: 0.45em; text-align: justify; font-family: serif; background-color: white; border-radius:0.3em;}
 
 /*page sections*/
@@ -29,10 +30,10 @@ div.abstract { font-size: 1.1em; margin: 0.6em; padding: 0.45em; text-align: jus
 #spinner {float:right;}
 
 /*settings/input*/
-#input {font-size:1em; padding:0.45em; margin: 0.6em; background-color: #ffdddd; border-radius: 0.3em; border: 1px solid #ffcccc;}
+#input {font-size:1em; padding:0.45em; margin: 0.6em; padding-right: .8em; background-color: #eeeeff; border-radius: 0.3em; border: 1px solid #ddddff;}
 #inputbox {width:100%; padding:0.2em; font-size:1em;}
 #inputHolder{padding-right:  0.6em; padding-top: 0.2em}
-#bookMarkLink {color:#000088; }
+#input input a {color:#000088; }
 #settingsHolder{padding-top: 0.6em; padding-bottom:0.25em;}
 .changesource {cursor: pointer; margin: 0.1em 0.1em; font-size: 0.9em; background-color: #ffbbbb; padding: 0.2em 0.45em; border-radius: 0.3em; color: black; display:inline-block;}
 .sort-choice {cursor: pointer; margin: 0.1em 0.1em; font-size: 0.9em; background-color: #CEF2C7; padding: 0.2em 0.45em; border-radius: 0.3em; color: black; display:inline-block;}
