@@ -33,6 +33,8 @@ def format_post(post, template, normalization):
     color=''.join(map(chr, rgb)).encode('hex')
     template_values={'url': 'http://arxiv.org/pdf/%s' % post.arxiv_id, 
                      'title': post.title, 
+                     'arxiv_id': post.arxiv_id, 
+                     'short_id': 'p'+post.arxiv_id.replace('.', ''), 
                      'authors': post.authors, 
                      'new': post.published.strftime('%A %d %B'),
                      'hits': ' '.join(post.hits),
@@ -81,6 +83,13 @@ class InstantPage(webapp2.RequestHandler):
         html=build_content(self.request)
         self.response.out.write(html)
 
+class AbstractPage(webapp2.RequestHandler):
+    def get(self):
+        ''' Build the page and send it over '''
+        target_id=self.request.get('arxiv_id')
+        query = Post.query(Post.arxiv_id==target_id).get() 
+        self.response.out.write(query.abstract)
+
 class ScrapePage(webapp2.RequestHandler):
     def get(self):
         ''' A cron job said that it's time to scrape the journals '''
@@ -115,6 +124,7 @@ class ScrapePage(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/instant', InstantPage),
+    ('/abstract', AbstractPage),
     ('/admin/scrape', ScrapePage)], debug=False)
 
 

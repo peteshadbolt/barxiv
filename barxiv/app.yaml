@@ -33,6 +33,9 @@ handlers:
 - url: /instant/.*
   script: barxiv.application
 
+- url: /abstract/.*
+  script: barxiv.application
+
 - url: /.*
   script: barxiv.application
 

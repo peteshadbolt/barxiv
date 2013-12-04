@@ -66,17 +66,11 @@ function update(force)
     $.ajax({
       url:'instant?tags='+tags,
       dataType: 'html',
-      success: function( data ) {
-        console.log('Got page update');
-        $('#container').html(data);
-      },
-      error: function( data ) {
-        console.log( "Instant error");
-      }
+      success: function( data ) { $('#container').html(data); },
+      error: function( data ) { console.log( "Page error"); }
     });
 
 }
-
 
 // Set up the input box
 function setInputBox(tags)  
@@ -87,6 +81,20 @@ function setInputBox(tags)
     update();
 }
 
+function postClicked(arxiv_id, short_id)
+{
+    console.log('/abstract?arxiv_id='+arxiv_id);
+    $.ajax({
+      url:'/abstract?arxiv_id='+arxiv_id,
+      dataType: 'html',
+      success: function( data ) { 
+          console.log('#'+short_id);
+          console.log($('#'+short_id));
+          $('#'+arxiv_id).html(data);
+      },
+      error: function( data ) { console.log( "Page error"); }
+    });
+}
 
 // Gets called when the page loads
 function main() 
