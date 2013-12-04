@@ -26,6 +26,10 @@ handlers:
   static_files: images/apple-touch-icon.png
   upload: images/apple-touch-icon.png
 
+- url: /admin/.*
+  script: barxiv.application
+  login: admin
+
 - url: /.*
   script: barxiv.application
 

@@ -13,5 +13,11 @@ indexes:
 - kind: Post
   ancestor: yes
   properties:
+  - name: published
+    direction: desc
+
+- kind: Post
+  ancestor: yes
+  properties:
   - name: scraped
     direction: desc

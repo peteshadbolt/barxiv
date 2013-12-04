@@ -1,4 +1,5 @@
 cron:
 - description: Scrape all journals
   url: /admin/scrape
-  schedule: every 2 hours
+  schedule: every day 02:00
+  timezone: 
