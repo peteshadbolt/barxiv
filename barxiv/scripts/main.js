@@ -1,20 +1,14 @@
-//prl add science, npg, prl, keyboard shortcuts, 
-
 // Globals
 var rainbow = new Rainbow(); 
 rainbow.setSpectrum('#eeeeff', '#ffdd77');
 introductionExists = true;
 var lastInputValue='';
-var feedData='';
 var intervalID='none';
-var startFeed='quant-ph';
-var sortMode='closest';
 
 // Run on startup
 $(document).ready(main);
 
 function strip(s) { return s.replace(/^\s\s*/, '').replace(/\s\s*$/, ''); }
-
 
 // Get the query string (http://www.mysite.com/index.php?x=x1&x=x2&x=x3)
 function getQuery(name) {
@@ -23,42 +17,6 @@ function getQuery(name) {
         results = regex.exec(location.search);
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-
-
-// Format a post
-function getPost(entry, matches, color)
-{
-    // ALL of the below should be done by python! just bung in the matches and the background color!
-    var post='';
-    post+='<div class="post" style="background-color: ' + color + ';">';
-
-    // Title and matches
-    post+='<div>';
-    post+='<a href="' + entry.link + '" target="_blank">' + entry.title + '</a>';
-    if (matches.length>0) { post+='<div id="matches" class="match">'+matches+'</span></div>'; }
-    post+='<br class="clear"/>';
-    post+='</div>';
-
-    // Authors and date
-    post+='<div>';
-    post+='<div class="authors">'+entry.authors+'</div>';
-    if (entry.published=="New")
-    {
-        post+='<div class="newPost">'+entry.published+'</div>';
-    } else 
-    {
-        post+='<div class="date">'+entry.published+'</div>';
-    }
-
-    post+='<br class="clear"/>';
-    post+='</div>';
-
-    // The abstract
-    post+='<div class="abstract" style="display: none;">'+entry.abstract+'</div>';
-    post+='</div>';
-    return post;
-}
-
 
 // Parse the tags
 function parseTags(raw) { 
@@ -71,31 +29,13 @@ function parseTags(raw) {
     return tags;
 }
 
-
-// Score a post
-function getMatches(search, tags)
-{
-    var matches=new Array();
-    for (var i=0; i<tags.length; i++)
-    {
-        if (search.indexOf(tags[i])!=-1){ matches.push(tags[i]); }
-    }
-    return matches;
-}
-
-
 // Update the bookmark link
 function updateBookmarkLink(tags)
 {
-    var link='http://www.peteshadbolt.co.uk/barxiv/?tags='+tags;
-    if (sortMode=='newest'){link+='\&nosort=1';}
-    if (startFeed!='quant-ph'){link+='\&source='+startFeed;}
+    var link='http://barxiv.appspot.com/?tags='+tags;
     $('#bookMarkLink').attr('href', link)
-    localStorage.sortMode=sortMode;
-    localStorage.startFeed=startFeed;
     localStorage.tags=tags.join('_')
 }
-
 
 // Remove the introduction panel
 function removeIntroduction(speed)
@@ -105,7 +45,6 @@ function removeIntroduction(speed)
     if (speed=='fast'){ $('#introduction').remove(); }
     introductionExists=false;
 }
-
 
 // Update the full page
 function update(force)
@@ -121,38 +60,20 @@ function update(force)
     // Parse the user's command 
     var tags = parseTags(inputValue);
     updateBookmarkLink(tags);
-
-    // Score each post
-    var table = new Array();
-    var max = 0;
-    for (var i=0; i<feedData.length; i++) 
-    { 
-        var matches=getMatches(feedData[i].search, tags);
-        if (matches.length>max){ max = matches.length; }
-        table.push({'index':i, 'matches':matches, 'score':matches.length }); 
-    }
-
-    // Sort by number of matches
-    if (sortMode=='closest' && max>0) { table.sort(function(a,b){ return b['score']-a['score']; }); }
-
-    // Rebuild the table
-    $('#container').empty();  
-    rainbow.setNumberRange(0, max==0 ? 1 : max);
-    var s='<div>';
-    for(var i=0; i < table.length; i++)
-    {
-        var row = table[i];
-        var color = '#'+rainbow.colourAt(row['score']);        
-        s += getPost(feedData[row['index']], row['matches'].join(' '), color);
-    }    
-    s+='</div>';
-
-    // Put it in there
-    $('#container').append(s);      
     
-    // Hide all the abstracts
-    //$('.abstract').hide();
-    $('.post').click(function(){$(this).find('.abstract').slideToggle(100);});
+    // Grab the page from the server
+    console.log('Requesting page...');
+    $.ajax({
+      url:'instant?tags='+tags,
+      dataType: 'html',
+      success: function( data ) {
+        console.log('Got page update');
+        $('#container').html(data);
+      },
+      error: function( data ) {
+        console.log( "Instant error");
+      }
+    });
 
 }
 
@@ -167,54 +88,16 @@ function setInputBox(tags)
 }
 
 
-// load a feed
-function loadFeed(filename)
-{
-    filename='cache/'+filename;
-    if (intervalID!='none') {clearInterval(intervalID);}
-    $('#spinner').show()
-    $.getJSON(filename, function( json ) {
-        $('#spinner').hide()
-        feedData = json;
-        intervalID = setInterval(update, 250);
-        update(true);
-    });
-}
-
-
 // Gets called when the page loads
 function main() 
 {
-    // Bind update to form changes
-    $('.changesource').click(function()
-    {
-        $('.changesource').css('border', 'none');
-        loadFeed($(this).text()+'.json');
-        startFeed=$(this).text();
-        $(this).css('border', '1px solid red');
-    });
-
-    $('.sort-choice').click(function()
-    {
-        $('.sort-choice').css('border', 'none');
-        sortMode=$(this).text();
-        $(this).css('border', '1px solid #55dd33');
-        update(true);
-    });
-
     // Set up the input box from the query string and focus
-    if (localStorage.sortMode!=undefined){sortMode=localStorage.sortMode;}
-    if (localStorage.startFeed!=undefined){startFeed=localStorage.startFeed;}
-    if (getQuery('nosort')=='1'){sortMode='newest';}
     userTags=getQuery('tags')
     if (userTags=='' && localStorage.tags!=undefined){userTags=localStorage.tags;}
     setInputBox(userTags);
     $('#inputbox').focus(); 
-    userStartFeed=getQuery('source');
-    if (userStartFeed!=''){startFeed=userStartFeed;}
 
-    // Load the json and fill the screen
-    $('#change-'+startFeed).css('border', '1px solid red');
-    $('#sort-'+sortMode).css('border', '1px solid #55dd33');
-    loadFeed(startFeed+'.json');
+    // Periodically check the inputbox and update
+    intervalID = setInterval(update, 500);
 }
+

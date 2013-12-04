@@ -22,31 +22,64 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'])
 
+def format_post(post, template, normalization):
+    if normalization<1:
+        rgb=(245, 245, 245)
+    else:
+        color=len(post.hits)/float(normalization)
+        rgb=map(int, (255*(.8+.2*color), 200, 255*(.9-.5*color)))
+        rgb=map(lambda x: min(255, x+30), rgb)
+
+    color=''.join(map(chr, rgb)).encode('hex')
+    template_values={'url': 'http://arxiv.org/pdf/%s' % post.arxiv_id, 
+                     'title': post.title, 
+                     'authors': post.authors, 
+                     'new': post.published.strftime('%A %d %B'),
+                     'hits': ' '.join(post.hits),
+                     'abstract': 'no abstract',
+                     'color': color}
+    return template.render(template_values)
+
+def build_content(request):
+    ''' Builds HTML for the main list of posts ''' 
+    # parse the URL
+    tags = map(lambda x: x.strip().lower(), request.get('tags').split(','))
+    tags=filter(lambda x: len(x)>1, tags)
+
+    # get all reccent posts
+    query = Post.query(ancestor=post_database_key()).order(-Post.published)
+    posts = query.fetch(100)
+
+    # figure out hits
+    for post in posts:
+        post.hits=[]
+        for tag in tags:
+            if tag in post.search_terms: post.hits.append(tag)
+
+    # sort
+    posts=sorted(posts, key=lambda x: len(x.hits), reverse=1)
+
+    # build the page
+    template = JINJA_ENVIRONMENT.get_template('post.html')
+    normalization=max([len(p.hits) for p in posts])
+    logging.info(normalization)
+    posts=[format_post(post, template, normalization) for post in posts]
+    html='\n\n'.join(posts)
+    return html
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
         ''' Build the page and send it over '''
-        all_posts='posts'
-
-        query = Post.query(ancestor=post_database_key()).order(-Post.published)
-        latest_posts = query.fetch(None)
-
-        all_posts=''
-        template = JINJA_ENVIRONMENT.get_template('post.html')
-        for post in latest_posts:
-            template_values={'url': 'http://arxiv.org/pdf/%s' % post.arxiv_id, 
-                             'title': post.title, 
-                             'authors': post.authors, 
-                             'new': post.published.strftime('%A %d %B'),
-                             'abstract': 'no abstract'}
-            all_posts+=template.render(template_values)
-
-        # Here we build the page based on the URL, for JS-less browsers
+        html=build_content(self.request)
         template = JINJA_ENVIRONMENT.get_template('index.html')
-        template_values={'all_posts': all_posts}
+        template_values={'all_posts': html}
         self.response.out.write(template.render(template_values))
 
-    # When the user starts typing into the form, they get back sorted JSON objects. 
-    # This reduces bandwidth, speeds up page loads, and avoids sorting in JS
+class InstantPage(webapp2.RequestHandler):
+    def get(self):
+        ''' Build the page and send it over '''
+        html=build_content(self.request)
+        self.response.out.write(html)
 
 class ScrapePage(webapp2.RequestHandler):
     def get(self):
@@ -81,6 +114,7 @@ class ScrapePage(webapp2.RequestHandler):
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/instant', InstantPage),
     ('/admin/scrape', ScrapePage)], debug=False)
 
 

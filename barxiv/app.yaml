@@ -30,6 +30,9 @@ handlers:
   script: barxiv.application
   login: admin
 
+- url: /instant/.*
+  script: barxiv.application
+
 - url: /.*
   script: barxiv.application
 
