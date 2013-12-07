@@ -27,8 +27,7 @@
     <div> 
         <b>Type some keywords and authors into the box below.</b>
         Then bookmark <a id='bookMarkLink' href='#'>this link</a> to save your settings.
-        <img id='spinner' src='spin.gif' style='display: none;'/>
-        <span class='clear'></span>
+        <div class='clear'></div>
     </div>
 
     <div id='inputHolder'> 
@@ -38,9 +37,15 @@
 
     <div id='checkBoxHolder'>
          <label><input type="checkbox" /> Sort entries</label>
-         <label><input type="checkbox" /> Always show abstracts</label>
-         <a id='moreOptions' href='#'>More options</a>
+         <label><input type="checkbox" /> Show abstracts</label>
+         <a id='moreOptions' onclick='javascript:$("#options").slideToggle(100)' href='#'>Options</a>
+        <div class='clear'></div>
     </div>
+
+    <div id='options' style='display:none'>
+        More options coming soon...
+    </div>
+
 </div>
 
 

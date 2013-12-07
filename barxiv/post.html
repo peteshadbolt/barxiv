@@ -1,7 +1,7 @@
 <div id="{{short_id}}" class="post" style="background-color: #{{color}};" onclick='javascript:postClicked("{{arxiv_id}}", "{{short_id}}");' >
 
     <div>
-        <!--<img src="today.png">-->
+        {{image}}
         <a target="_blank" href="{{url}}">{{title}}</a>
         <div class="match">{{hits}}</div>
         <br class="clear">
@@ -13,7 +13,7 @@
         <br class="clear">
     </div>
 
-    <div class="abstract" style="display: none;">
+    <div class='abstract' style='display:none'>
         {{abstract}}
     </div>
 

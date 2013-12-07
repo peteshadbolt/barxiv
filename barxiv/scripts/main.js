@@ -69,7 +69,6 @@ function update(force)
       success: function( data ) { $('#container').html(data); },
       error: function( data ) { console.log( "Page error"); }
     });
-
 }
 
 // Set up the input box
@@ -88,9 +87,8 @@ function postClicked(arxiv_id, short_id)
       url:'/abstract?arxiv_id='+arxiv_id,
       dataType: 'html',
       success: function( data ) { 
-          console.log('#'+short_id);
-          console.log($('#'+short_id));
-          $('#'+arxiv_id).html(data);
+        $('#'+short_id+' .abstract').html(data);
+        $('#'+short_id+' .abstract').toggle();
       },
       error: function( data ) { console.log( "Page error"); }
     });

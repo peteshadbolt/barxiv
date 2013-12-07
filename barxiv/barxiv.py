@@ -3,6 +3,7 @@ from google.appengine.ext import ndb
 import jinja2
 import json, time, logging, os, re
 import arxiv
+import datetime
 
 DEFAULT_DATABASE_NAME='BARXIV'
 def post_database_key(): return ndb.Key('Post', DEFAULT_DATABASE_NAME)
@@ -23,6 +24,9 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'])
 
 def format_post(post, template, normalization):
+    ''' Format a post '''
+
+    # choose the color
     if normalization<1:
         rgb=(245, 245, 245)
     else:
@@ -30,15 +34,21 @@ def format_post(post, template, normalization):
         rgb=map(int, (255*(.8+.2*color), 200, 255*(.9-.5*color)))
         rgb=map(lambda x: min(255, x+30), rgb)
 
+    # if it was posted today, add an image
+    image=''
+    if (datetime.datetime.today() - post.published).days<1:
+        image='<img src="images/today.png">'
+
     color=''.join(map(chr, rgb)).encode('hex')
-    template_values={'url': 'http://arxiv.org/pdf/%s' % post.arxiv_id, 
+    template_values={'image': image,
+                     'url': 'http://arxiv.org/pdf/%s' % post.arxiv_id, 
                      'title': post.title, 
                      'arxiv_id': post.arxiv_id, 
                      'short_id': 'p'+post.arxiv_id.replace('.', ''), 
                      'authors': post.authors, 
                      'new': post.published.strftime('%A %d %B'),
+                     'abstract': '',
                      'hits': ' '.join(post.hits),
-                     'abstract': 'no abstract',
                      'color': color}
     return template.render(template_values)
 
