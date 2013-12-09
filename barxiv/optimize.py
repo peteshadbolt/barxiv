@@ -7,5 +7,5 @@ def optimize_search(s):
     s=s.replace(',', ' ')
     s=map(lambda x: x.strip(), list(set(s.split(' '))))
     s= ''.join(filter(lambda x: not x in frequentwords, s))
-    if len(s)>450: s=s[:450]
+    #if len(s)>450: s=s[:450]
     return s

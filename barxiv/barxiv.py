@@ -14,7 +14,7 @@ class Post(ndb.Model):
     title=ndb.TextProperty()
     abstract=ndb.TextProperty()
     authors=ndb.TextProperty()
-    search_terms=ndb.StringProperty()
+    search_terms=ndb.TextProperty()
     published=ndb.DateTimeProperty()
     scraped=ndb.DateTimeProperty(auto_now_add=True)
 
@@ -61,13 +61,14 @@ def build_content(request):
 
     # get all reccent posts
     query = Post.query(ancestor=post_database_key()).order(-Post.published)
-    posts = query.fetch(100)
+    posts = query.fetch(200)
 
     # figure out hits
     for post in posts:
         post.hits=[]
         for tag in tags:
-            if tag in post.search_terms: post.hits.append(tag)
+            if tag in post.search_terms or tag in post.title.lower(): 
+                post.hits.append(tag)
 
     # sort
     if sort: posts=sorted(posts, key=lambda x: len(x.hits), reverse=1)
