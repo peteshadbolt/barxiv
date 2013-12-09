@@ -56,15 +56,19 @@ function update(force)
 
     // Clear the introduction if necessary
     if (inputValue.length>2) {removeIntroduction('slow');}
-
+    
     // Parse the user's command 
     var tags = parseTags(inputValue);
+    
+    // Build the url
+    var url='?tags='+tags
     updateBookmarkLink(tags);
+    if (!$('#sortCheckBox').is(':checked')) {url+='&nosort=1'}
     
     // Grab the page from the server
     console.log('Requesting page...');
     $.ajax({
-      url:'instant?tags='+tags,
+      url: 'instant'+url,
       dataType: 'html',
       success: function( data ) { $('#container').html(data); },
       error: function( data ) { console.log( "Page error"); }
@@ -102,6 +106,9 @@ function main()
     if (userTags=='' && localStorage.tags!=undefined){userTags=localStorage.tags;}
     setInputBox(userTags);
     $('#inputbox').focus(); 
+
+    // Bind the checkbox
+    $('#sortCheckBox').change(update);
 
     // Periodically check the inputbox and update
     intervalID = setInterval(update, 500);

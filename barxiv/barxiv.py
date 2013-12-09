@@ -56,7 +56,8 @@ def build_content(request):
     ''' Builds HTML for the main list of posts ''' 
     # parse the URL
     tags = map(lambda x: x.strip().lower(), request.get('tags').split(','))
-    tags=filter(lambda x: len(x)>1, tags)
+    tags = filter(lambda x: len(x)>1, tags)
+    sort = str(request.get('nosort'))!='1'
 
     # get all reccent posts
     query = Post.query(ancestor=post_database_key()).order(-Post.published)
@@ -69,7 +70,7 @@ def build_content(request):
             if tag in post.search_terms: post.hits.append(tag)
 
     # sort
-    posts=sorted(posts, key=lambda x: len(x.hits), reverse=1)
+    if sort: posts=sorted(posts, key=lambda x: len(x.hits), reverse=1)
 
     # build the page
     template = JINJA_ENVIRONMENT.get_template('post.html')
