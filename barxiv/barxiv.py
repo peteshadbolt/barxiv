@@ -76,7 +76,6 @@ def build_content(request):
     # build the page
     template = JINJA_ENVIRONMENT.get_template('post.html')
     normalization=max([len(p.hits) for p in posts])
-    logging.info(normalization)
     posts=[format_post(post, template, normalization) for post in posts]
     html='\n\n'.join(posts)
     return html

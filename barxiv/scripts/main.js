@@ -30,11 +30,14 @@ function parseTags(raw) {
 }
 
 // Update the bookmark link
-function updateBookmarkLink(tags)
+function saveSettings(tags, sort)
 {
     var link='http://barxiv.appspot.com/?tags='+tags;
+    if (!sort){link+='&nosort=1';}
     $('#bookMarkLink').attr('href', link)
-    localStorage.tags=tags.join('_')
+    localStorage.tags=tags.join('_');
+    localStorage.sort=sort;
+    console.log(localStorage.sort);
 }
 
 // Remove the introduction panel
@@ -62,8 +65,9 @@ function update(force)
     
     // Build the url
     var url='?tags='+tags
-    updateBookmarkLink(tags);
-    if (!$('#sortCheckBox').is(':checked')) {url+='&nosort=1'}
+    var sort = $('#sortCheckBox').is(':checked');
+    if (!sort) {url+='&nosort=1'}
+    saveSettings(tags, sort);
     
     // Grab the page from the server
     console.log('Requesting page...');
@@ -105,6 +109,8 @@ function main()
     userTags=getQuery('tags')
     if (userTags=='' && localStorage.tags!=undefined){userTags=localStorage.tags;}
     setInputBox(userTags);
+    console.log(localStorage.sort);
+    if (localStorage.sort!=undefined){ $('#sortCheckBox').prop(':checked', localStorage.sort); }
     $('#inputbox').focus(); 
 
     // Bind the checkbox
