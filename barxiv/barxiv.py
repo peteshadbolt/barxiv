@@ -25,7 +25,6 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 def format_post(post, template, normalization):
     ''' Format a post '''
-
     # choose the color
     if normalization<1:
         rgb=(245, 245, 245)
@@ -57,7 +56,7 @@ def build_content(request):
     # parse the URL
     tags = map(lambda x: x.strip().lower(), request.get('tags').split(','))
     tags = filter(lambda x: len(x)>1, tags)
-    sort = str(request.get('nosort'))!='1'
+    sort = str(request.get('sort'))=='1'
 
     # get all reccent posts
     query = Post.query(ancestor=post_database_key()).order(-Post.published)

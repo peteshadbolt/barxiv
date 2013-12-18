@@ -4,6 +4,8 @@ rainbow.setSpectrum('#eeeeff', '#ffdd77');
 introductionExists = true;
 var lastInputValue='';
 var intervalID='none';
+var sortPosts=false;
+var searchTerms=[];
 
 // Run on startup
 $(document).ready(main);
@@ -30,14 +32,14 @@ function parseTags(raw) {
 }
 
 // Update the bookmark link
-function saveSettings(tags, sort)
+function saveSettings()
 {
-    var link='http://barxiv.appspot.com/?tags='+tags;
-    if (!sort){link+='&nosort=1';}
+    var link='http://barxiv.appspot.com/?tags='+searchTerms;
+    link+='&sort=' + (sortPosts ? '1' : '0');
     $('#bookMarkLink').attr('href', link)
-    localStorage.tags=tags.join('_');
-    localStorage.sort=sort;
-    console.log(localStorage.sort);
+    localStorage.searchTerms=searchTerms.join('_');
+    localStorage.sortPosts=sortPosts;
+    console.log('Wrote sort value to localStorage:' + localStorage.sortPosts);
 }
 
 // Remove the introduction panel
@@ -50,7 +52,7 @@ function removeIntroduction(speed)
 }
 
 // Update the full page
-function update(force)
+function update(force=false)
 {
     // Skip if the input box has not changed
     var inputValue=$('#inputbox').val()
@@ -61,13 +63,13 @@ function update(force)
     if (inputValue.length>2) {removeIntroduction('slow');}
     
     // Parse the user's command 
-    var tags = parseTags(inputValue);
+    searchTerms = parseTags(inputValue);
     
     // Build the url
-    var url='?tags='+tags
-    var sort = $('#sortCheckBox').is(':checked');
-    if (!sort) {url+='&nosort=1'}
-    saveSettings(tags, sort);
+    var url='?tags='+searchTerms
+    sortPosts = $('#sortCheckBox').is(':checked');
+    url += '&sort='+(sortPosts ? '1' : '0');
+    saveSettings();
     
     // Grab the page from the server
     console.log('Requesting page...');
@@ -80,12 +82,13 @@ function update(force)
 }
 
 // Set up the input box
-function setInputBox(tags)  
+function setInputBox()  
 {
-    if (tags.length<=0) {return;}
-    $('#inputbox').val(tags.replace(/_/g, ' '));
+    if (searchTerms.length<=0) {return;}
+    var s = searchTerms.replace(/_/g, ' ');
+    $('#inputbox').val(s);
+    lastInputValue=s;
     removeIntroduction('fast');
-    update();
 }
 
 function postClicked(arxiv_id, short_id)
@@ -106,14 +109,14 @@ function postClicked(arxiv_id, short_id)
 function main() 
 {
     // Set up the input box from the query string and focus
-    userTags=getQuery('tags')
-    if (userTags=='' && localStorage.tags!=undefined){userTags=localStorage.tags;}
-    setInputBox(userTags);
-    console.log(localStorage.sort);
-    if (localStorage.sort!=undefined){ $('#sortCheckBox').prop(':checked', localStorage.sort); }
+    var userTags=getQuery('tags')
+    if (userTags=='' && localStorage.searchTerms!=undefined){userTags=localStorage.searchTerms;}
     $('#inputbox').focus(); 
+    setInputBox(userTags);
 
-    // Bind the checkbox
+    // Set up the checkbox
+    console.log('On startup, found sort value ' + localStorage.sortPosts);
+    if (localStorage.sortPosts!=undefined){ $('#sortCheckBox').prop(':checked', localStorage.sortPosts); }
     $('#sortCheckBox').change(update);
 
     // Periodically check the inputbox and update
