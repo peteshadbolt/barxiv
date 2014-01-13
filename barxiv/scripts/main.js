@@ -110,9 +110,9 @@ function main()
 {
     // Set up the input box from the query string and focus
     var userTags=getQuery('tags')
-    if (userTags=='' && localStorage.searchTerms!=undefined){userTags=localStorage.searchTerms;}
+    if (userTags=='' && localStorage.searchTerms!=undefined){searchTerms=localStorage.searchTerms;}
     $('#inputbox').focus(); 
-    setInputBox(userTags);
+    setInputBox();
 
     // Set up the checkbox
     console.log('On startup, found sort value ' + localStorage.sortPosts);
