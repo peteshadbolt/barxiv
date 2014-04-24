@@ -37,9 +37,9 @@ function saveSettings()
     var link='http://barxiv.appspot.com/?tags='+searchTerms;
     link+='&sort=' + (sortPosts ? '1' : '0');
     $('#bookMarkLink').attr('href', link)
-    localStorage.searchTerms=searchTerms.join('_');
+    localStorage.searchTerms=searchTerms;
     localStorage.sortPosts=sortPosts;
-    console.log('Wrote sort value to localStorage:' + localStorage.sortPosts);
+    //console.log('Wrote sort value to localStorage:' + localStorage.sortPosts);
 }
 
 // Remove the introduction panel
@@ -52,8 +52,9 @@ function removeIntroduction(speed)
 }
 
 // Update the full page
-function update(force=false)
+function update(force)
 {
+    if (force==undefined){force=false;}
     // Skip if the input box has not changed
     var inputValue=$('#inputbox').val()
     if (lastInputValue == inputValue && !force){return;}
@@ -85,10 +86,10 @@ function update(force=false)
 function setInputBox()  
 {
     if (searchTerms.length<=0) {return;}
-    var s = searchTerms.replace(/_/g, ' ');
+    //var tidy_search = searchTerms.replace(/_/g, ' ');
+    s=searchTerms.join(' ')
     $('#inputbox').val(s);
     lastInputValue=s;
-    removeIntroduction('fast');
 }
 
 function postClicked(arxiv_id, short_id)
@@ -108,16 +109,19 @@ function postClicked(arxiv_id, short_id)
 // Gets called when the page loads
 function main() 
 {
-    // Set up the input box from the query string and focus
-    var userTags=getQuery('tags')
-    if (userTags=='' && localStorage.searchTerms!=undefined){searchTerms=localStorage.searchTerms;}
-    $('#inputbox').focus(); 
-    setInputBox();
-
     // Set up the checkbox
-    console.log('On startup, found sort value ' + localStorage.sortPosts);
     if (localStorage.sortPosts!=undefined){ $('#sortCheckBox').prop(':checked', localStorage.sortPosts); }
     $('#sortCheckBox').change(update);
+
+    // Set up the input box from the query string and focus
+    var userTags=getQuery('tags')
+    if (userTags=='' && localStorage.searchTerms!=undefined){
+        searchTerms=localStorage.searchTerms;
+        removeIntroduction('fast');
+        update(true);
+    }
+    $('#inputbox').focus(); 
+    setInputBox();
 
     // Periodically check the inputbox and update
     intervalID = setInterval(update, 500);
